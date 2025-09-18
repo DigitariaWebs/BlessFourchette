@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { Phone } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link";
 
-export function Header() {
+export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-[var(--color-secondary)] text-white shadow-lg">
       <div className="container mx-auto px-10 py-4">
@@ -20,30 +21,30 @@ export function Header() {
 
           {/* Navigation in the middle */}
           <nav className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
-            <a
-              href="#accueil"
+            <Link
+              href="/#accueil"
               className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
               Accueil
-            </a>
-            <a
-              href="#a-propos"
+            </Link>
+            <Link
+              href="#notre-histoire"
               className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
               À Propos
-            </a>
-            <a
-              href="#services"
+            </Link>
+            <Link
+              href="/#services"
               className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
               Services
-            </a>
-            <a
-              href="#menu"
+            </Link>
+            <Link
+              href="/menu"
               className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
               Menu
-            </a>
+            </Link>
           </nav>
 
           {/* Contact button on the right */}
