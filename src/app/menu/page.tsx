@@ -15,6 +15,7 @@ function MenuContent() {
 
   const categories = [
     "School Menu",
+    "Family Menu",
     "Bless Fourchette Spices",
     "Juices",
   ];
@@ -24,6 +25,8 @@ function MenuContent() {
 
     if (category === "School Menu") {
       newMenuType = "ecole";
+    } else if (category === "Family Menu") {
+      newMenuType = "famille";
     } else if (category === "Juices") {
       newMenuType = "jus";
     } else if (category === "Bless Fourchette Spices") {

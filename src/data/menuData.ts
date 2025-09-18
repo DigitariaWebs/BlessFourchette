@@ -26,6 +26,7 @@ export const menuConfigs: Record<string, MenuConfig> = {
       "Menus are available Monday through Thursday",
       "Orders can be placed for the full month, or every Sunday until noon",
       "Menus will be changed every month",
+    "School menu available starting October 15th 2025",
     ],
     sections: [
       // OCTOBRE 2025 (15-30 octobre)
@@ -40,13 +41,13 @@ export const menuConfigs: Record<string, MenuConfig> = {
             title: "Wednesday - Black rice and stir-fried vegetables with tofu",
             description:
               "Black rice, mixed vegetables stir-fried, marinated tofu - Complete vegetarian menu",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "oct-s3-jeudi",
             title: "Thursday - Tofu burger and crispy potatoes",
             description: "Vegetarian tofu burger, crispy potato wedges",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -62,7 +63,7 @@ export const menuConfigs: Record<string, MenuConfig> = {
               "Monday - White rice, Black-eyed pea puree, Spinach vegetables",
             description:
               "White rice, creole black-eyed pea puree, sautéed spinach",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "oct-s4-mardi",
@@ -70,21 +71,21 @@ export const menuConfigs: Record<string, MenuConfig> = {
               "Tuesday - Mashed potatoes and stir-fried vegetables with chickpeas",
             description:
               "Mashed potatoes, stir-fried mixed vegetables, spiced chickpeas",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "oct-s4-mercredi",
             title: "Wednesday - Caesar salad with chicken substitute and bread",
             description:
               "Vegetarian Caesar salad, chicken substitute, fresh bread",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "oct-s4-jeudi",
             title: "Thursday - Hot eggplant sandwich",
             description:
               "Hot sandwich with grilled eggplants and creole spices",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -99,28 +100,28 @@ export const menuConfigs: Record<string, MenuConfig> = {
             title: "Monday - Rice with brown peas, Beef substitute stir-fry",
             description:
               "Rice with brown peas, stir-fry with beef substitute protein",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "oct-s5-mardi",
             title: "Tuesday - Macaroni with vegetables",
             description:
               "Macaroni with mixed vegetables sautéed and creole sauce",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "oct-s5-mercredi",
             title: "Wednesday - Beet salad and bread",
             description:
               "Fresh beet salad, homemade vinaigrette, artisanal bread",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "oct-s5-jeudi",
             title: "Thursday - Vegetable fajitas and sautéed potatoes",
             description:
               "Vegetarian fajitas, grilled vegetables, sautéed potatoes",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -136,26 +137,26 @@ export const menuConfigs: Record<string, MenuConfig> = {
             title: "Monday - Rice with vegetables and tofu stir-fry",
             description:
               "Fragrant rice, seasonal vegetables, tofu stir-fried with creole spices",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s1-mardi",
             title: "Tuesday - Mashed potatoes and beef vegetable protein stew",
             description: "Creamy mashed potatoes, beef vegetable protein stew",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s1-mercredi",
             title: "Wednesday - Carrot and chili salad with nan bread",
             description: "Spicy carrot salad with chili, traditional nan bread",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s1-jeudi",
             title: "Thursday - Vegetable beef burger",
             description:
               "Vegetarian burger with vegetable beef patty and toppings",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -171,27 +172,27 @@ export const menuConfigs: Record<string, MenuConfig> = {
               "Monday - White rice, Brown pea puree, Green cabbage and carrot vegetables",
             description:
               "White rice, brown pea puree, sautéed green cabbage and carrots",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s2-mardi",
             title: "Tuesday - Spaghetti with various vegetable sauce",
             description:
               "Spaghetti with rich sauce made from various seasonal vegetables",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s2-mercredi",
             title: "Wednesday - Cabbage salad and bread",
             description: "Fresh cabbage salad, creole vinaigrette, fresh bread",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s2-jeudi",
             title: "Thursday - Cold vegetable sandwich",
             description:
               "Cold sandwich with fresh vegetables and homemade condiments",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -206,26 +207,26 @@ export const menuConfigs: Record<string, MenuConfig> = {
             title: "Monday - Rice with green peas and broccoli/cauliflower",
             description:
               "Rice with green peas, steamed broccoli and cauliflower",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s3-mardi",
             title: "Tuesday - Vegetarian lasagna",
             description: "Vegetable and cheese lasagna, homemade tomato sauce",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s3-mercredi",
             title: "Wednesday - Baby spinach and quinoa salad",
             description: "Baby spinach salad, quinoa, light vinaigrette",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s3-jeudi",
             title: "Thursday - Beef vegetable protein stew",
             description:
               "Hearty stew with beef vegetable protein and vegetables",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -240,26 +241,26 @@ export const menuConfigs: Record<string, MenuConfig> = {
             title: "Monday - Vegetarian beef shepherd's pie",
             description:
               "Traditional shepherd's pie with vegetarian beef and corn",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s4-mardi",
             title: "Tuesday - Baked potato, broccoli, tofu patty",
             description: "Baked potatoes, steamed broccoli, grilled tofu patty",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s4-mercredi",
             title: "Wednesday - Couscous salad and bread",
             description:
               "Couscous salad with fresh vegetables, artisanal bread",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "nov-s4-jeudi",
             title: "Thursday - Pumpkin and ginger soup with bread",
             description: "Creamy pumpkin soup with ginger, fresh bread",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -275,7 +276,7 @@ export const menuConfigs: Record<string, MenuConfig> = {
             title: "Monday - White rice, Green pea puree, Spinach vegetables",
             description:
               "White rice, green pea puree, spinach sautéed with spices",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s1-mardi",
@@ -283,20 +284,20 @@ export const menuConfigs: Record<string, MenuConfig> = {
               "Tuesday - Mashed potatoes and stir-fried vegetables with chickpeas",
             description:
               "Mashed potatoes, stir-fried vegetables, spiced chickpeas",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s1-mercredi",
             title: "Wednesday - Beet Caesar salad and bread",
             description:
               "Caesar salad with beets, creole vinaigrette, fresh bread",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s1-jeudi",
             title: "Thursday - Tofu burger and crispy potatoes",
             description: "Vegetarian tofu burger, crispy potato wedges",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -310,27 +311,27 @@ export const menuConfigs: Record<string, MenuConfig> = {
             id: "dec-s2-lundi",
             title: "Monday - Couscous with vegetarian beef",
             description: "Traditional couscous with beef vegetable protein",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s2-mardi",
             title: "Tuesday - Sweet potato and vegetable stew",
             description:
               "Hearty stew with sweet potatoes and seasonal vegetables",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s2-mercredi",
             title: "Wednesday - Vegetable quiche",
             description: "Vegetarian quiche with fresh vegetables and cheese",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s2-jeudi",
             title: "Thursday - Vegetarian beef pita",
             description:
               "Pita bread filled with vegetarian beef and fresh vegetables",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -345,26 +346,26 @@ export const menuConfigs: Record<string, MenuConfig> = {
             title: "Monday - Black rice and tofu stir-fry",
             description:
               "Fragrant black rice, tofu stir-fried with vegetables and creole spices",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s3-mardi",
             title: "Tuesday - Vegetarian shepherd's pie",
             description:
               "Traditional vegetarian shepherd's pie with plant-based proteins",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s3-mercredi",
             title: "Wednesday - Green salad and tofu patty",
             description: "Fresh green salad accompanied by grilled tofu patty",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s3-jeudi",
             title: "Thursday - Carrot soup and bread",
             description: "Creamy carrot soup with spices, fresh bread",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -379,27 +380,27 @@ export const menuConfigs: Record<string, MenuConfig> = {
             title: "Monday - Quinoa and tofu patty",
             description:
               "Quinoa with vegetables accompanied by grilled tofu patty",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s4-mardi",
             title: "Tuesday - Macaroni with tofu",
             description:
               "Macaroni with stir-fried tofu and creole vegetable sauce",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s4-mercredi",
             title: "Wednesday - White rice and vegetable stir-fry",
             description:
               "Fragrant white rice, mixed vegetables stir-fried with spices",
-            price: "$10",
+            price: "$8",
           },
           {
             id: "dec-s4-jeudi",
             title: "Thursday - Vegetarian lasagna",
             description: "Vegetable and cheese lasagna, homemade tomato sauce",
-            price: "$10",
+            price: "$8",
           },
         ],
       },
@@ -464,6 +465,47 @@ export const menuConfigs: Record<string, MenuConfig> = {
             description:
               "Spices made with vegetable products, no added salt. Can be used to season different foods prepared at home.",
             price: "$10",
+          },
+        ],
+      },
+    ],
+  },
+  famille: {
+    title: "Family Menu",
+    notes: [
+      "Coming Soon on October 1st, 2025! ",
+      "Our delicious family meals will be available for pre-order",
+      "Perfect portions for families of 4-6 people",
+      "Stay tuned for amazing family-friendly dishes!",
+      "Delivery available only Friday 11:00 AM to 4:00 PM",
+    ],
+    sections: [
+      {
+        id: "famille-coming-soon",
+        title: "FAMILY FEAST - COMING OCTOBER 1ST, 2025",
+        image: "/comingsoon.png",
+        imageAlt: "Delicious family meal preparations coming soon",
+        items: [
+          {
+            id: "famille-announcement",
+            title: "🍽️ Family Menu Launch - October 1st, 2025",
+            description:
+              "We're excited to announce our new Family Menu! Perfect for family gatherings, weekend meals, and special occasions. Our chefs are preparing generous portions of hearty, wholesome meals that will bring your family together around the table. Stay tuned for more details!",
+            price: "Coming Soon",
+          },
+          {
+            id: "famille-features",
+            title: "What to Expect",
+            description:
+              "• Family-sized portions (4-6 servings)\n• Weekly rotating menu with seasonal ingredients\n• Mix of traditional and modern fusion dishes\n• Vegetarian and vegan options available\n• Special holiday menus",
+            price: "Starting at $45",
+          },
+          {
+            id: "famille-preorder",
+            title: "Pre-Order Information",
+            description:
+              "Pre-orders will open on September 25th, 2025. Be among the first families to experience our new menu! Follow us on social media or subscribe to our newsletter for updates and exclusive early access offers.",
+            price: "Reserve Now",
           },
         ],
       },
