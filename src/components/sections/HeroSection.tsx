@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section id="accueil" className="relative flex-1 overflow-hidden">
+    <section id="accueil" className="relative h-screen overflow-hidden">
       {/* Background Image */}
       <Image
         src="/HeroSection.jpg"

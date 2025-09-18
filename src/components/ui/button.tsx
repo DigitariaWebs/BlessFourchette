@@ -15,13 +15,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
           {
             // Default variant using primary colors
-            "bg-[var(--color-secondary)] text-white hover:bg-[var(--color-primary)]/90": variant === "secondary",
+            "bg-[var(--color-secondary)] text-white hover:bg-[var(--color-primary)]/90 cursor-pointer": variant === "secondary",
             // Secondary variant using secondary colors  
-            "bg-[var(--color-primary)] text-white hover:bg-[var(--color-secondary)]/90": variant === "default",
+            "bg-[var(--color-primary)] text-white hover:bg-[var(--color-accent)]/90 cursor-pointer": variant === "default",
             // Outline variant
-            "border border-[var(--color-border)] bg-transparent hover:bg-[var(--color-accent)]/10 text-[var(--color-foreground)]": variant === "outline",
+            "border border-[var(--color-border)] bg-transparent hover:bg-[var(--color-accent)]/10 text-[var(--color-foreground)] cursor-pointer": variant === "outline",
             // Ghost variant
-            "hover:bg-[var(--color-accent)]/10 text-[var(--color-foreground)]": variant === "ghost",
+            "hover:bg-[var(--color-accent)]/10 text-[var(--color-foreground)] cursor-pointer": variant === "ghost",
           },
           {
             "h-10 px-4 py-2": size === "default",
