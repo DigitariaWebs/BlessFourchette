@@ -14,19 +14,19 @@ function MenuContent() {
   const menuConfig = getMenuConfig(menuType);
 
   const categories = [
-    "Menu École",
-    "Épices Pump Fourchette",
-    "Jus",
+    "School Menu",
+    "Bless Fourchette Spices",
+    "Juices",
   ];
 
   const handleCategoryClick = (category: string) => {
     let newMenuType = "ecole"; // default
 
-    if (category === "Menu École") {
+    if (category === "School Menu") {
       newMenuType = "ecole";
-    } else if (category === "Jus") {
+    } else if (category === "Juices") {
       newMenuType = "jus";
-    } else if (category === "Épices Pump Fourchette") {
+    } else if (category === "Bless Fourchette Spices") {
       newMenuType = "epices";
     }
 
@@ -95,7 +95,7 @@ function MenuContent() {
         <section className="py-8 bg-stone-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold text-[#1a4d3a] mb-4">Notes importantes :</h3>
+              <h3 className="text-lg font-semibold text-[#1a4d3a] mb-4">Important Notes:</h3>
               <ul className="space-y-2">
                 {menuConfig.notes.map((note, index) => (
                   <li key={index} className="flex items-start">

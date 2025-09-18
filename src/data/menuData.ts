@@ -21,94 +21,105 @@ export interface MenuConfig {
 
 export const menuConfigs: Record<string, MenuConfig> = {
   ecole: {
-    title: "Menu École",
+    title: "School Menu",
     notes: [
-      "Les menus sont disponibles du lundi au jeudi",
-      "Les commandes peuvent être passées pour le mois au complet, sinon à toutes les semaines le dimanche jusqu'à midi",
-      "Les menus seront changés à tous les mois"
+      "Menus are available Monday through Thursday",
+      "Orders can be placed for the full month, or every Sunday until noon",
+      "Menus will be changed every month",
     ],
     sections: [
       // OCTOBRE 2025 (15-30 octobre)
       {
         id: "octobre-semaine3",
-        title: "OCTOBRE - SEMAINE 3",
+        title: "OCTOBER - WEEK 3",
         image: "/Menu/CheeseMacorona.jpg",
         imageAlt: "Riz noir et légumes sautés au tofu",
         items: [
           {
             id: "oct-s3-mercredi",
-            title: "Mercredi - Riz noir et légumes sauté au tofu",
-            description: "Riz noir, légumes variés sautés, tofu mariné - Menu végétarien complet",
+            title: "Wednesday - Black rice and stir-fried vegetables with tofu",
+            description:
+              "Black rice, mixed vegetables stir-fried, marinated tofu - Complete vegetarian menu",
             price: "$10",
           },
           {
             id: "oct-s3-jeudi",
-            title: "Jeudi - Hamburger de tofu et patate rizolé",
-            description: "Hamburger végétarien au tofu, patates rizolées croustillantes",
+            title: "Thursday - Tofu burger and crispy potatoes",
+            description: "Vegetarian tofu burger, crispy potato wedges",
             price: "$10",
           },
         ],
       },
       {
         id: "octobre-semaine4",
-        title: "OCTOBRE - SEMAINE 4",
+        title: "OCTOBER - WEEK 4",
         image: "/Menu/Sandwitch.jpg",
         imageAlt: "Plats végétariens variés",
         items: [
           {
             id: "oct-s4-lundi",
-            title: "Lundi - Riz blanc, Purée de pois noir, Légumes épinards",
-            description: "Riz blanc, purée de pois noir créole, épinards sautés aux épices",
+            title:
+              "Monday - White rice, Black-eyed pea puree, Spinach vegetables",
+            description:
+              "White rice, creole black-eyed pea puree, sautéed spinach",
             price: "$10",
           },
           {
             id: "oct-s4-mardi",
-            title: "Mardi - Pomme de terre purée et légumes sauté et pois chiche",
-            description: "Purée de pommes de terre, légumes sautés, pois chiches épicés",
+            title:
+              "Tuesday - Mashed potatoes and stir-fried vegetables with chickpeas",
+            description:
+              "Mashed potatoes, stir-fried mixed vegetables, spiced chickpeas",
             price: "$10",
           },
           {
             id: "oct-s4-mercredi",
-            title: "Mercredi - Salade césar au simili de poulet et pain",
-            description: "Salade césar végétarienne, simili de poulet, pain frais",
+            title: "Wednesday - Caesar salad with chicken substitute and bread",
+            description:
+              "Vegetarian Caesar salad, chicken substitute, fresh bread",
             price: "$10",
           },
           {
             id: "oct-s4-jeudi",
-            title: "Jeudi - Sandwich de bergène chaud",
-            description: "Sandwich chaud aux aubergines grillées et épices créoles",
+            title: "Thursday - Hot eggplant sandwich",
+            description:
+              "Hot sandwich with grilled eggplants and creole spices",
             price: "$10",
           },
         ],
       },
       {
         id: "octobre-semaine5",
-        title: "OCTOBRE - SEMAINE 5",
-        image: "/Menu/ChikenBreast.jpg",
+        title: "OCTOBER - WEEK 5",
+        image: "/Menu/Couscous.png",
         imageAlt: "Riz aux pois et légumes",
         items: [
           {
             id: "oct-s5-lundi",
-            title: "Lundi - Riz au pois brun, Sauté de simili de bœuf",
-            description: "Riz aux pois bruns, sauté de protéine végétale au bœuf",
+            title: "Monday - Rice with brown peas, Beef substitute stir-fry",
+            description:
+              "Rice with brown peas, stir-fry with beef substitute protein",
             price: "$10",
           },
           {
             id: "oct-s5-mardi",
-            title: "Mardi - Macaroni aux légumes",
-            description: "Macaroni avec légumes variés sautés et sauce créole",
+            title: "Tuesday - Macaroni with vegetables",
+            description:
+              "Macaroni with mixed vegetables sautéed and creole sauce",
             price: "$10",
           },
           {
             id: "oct-s5-mercredi",
-            title: "Mercredi - Salade de betterave et pain",
-            description: "Salade de betteraves fraîches, vinaigrette maison, pain artisanal",
+            title: "Wednesday - Beet salad and bread",
+            description:
+              "Fresh beet salad, homemade vinaigrette, artisanal bread",
             price: "$10",
           },
           {
             id: "oct-s5-jeudi",
-            title: "Jeudi - Fajitas aux légumes et pomme de terre sauté",
-            description: "Fajitas végétariennes, légumes grillés, pommes de terre sautées",
+            title: "Thursday - Vegetable fajitas and sautéed potatoes",
+            description:
+              "Vegetarian fajitas, grilled vegetables, sautéed potatoes",
             price: "$10",
           },
         ],
@@ -116,128 +127,138 @@ export const menuConfigs: Record<string, MenuConfig> = {
       // NOVEMBRE 2025 (3-27 novembre)
       {
         id: "novembre-semaine1",
-        title: "NOVEMBRE - SEMAINE 1",
+        title: "NOVEMBER - WEEK 1",
         image: "/Menu/BowlOfSomething.jpg",
-        imageAlt: "Riz aux légumes et tofu",
+        imageAlt: "Rice with vegetables and tofu",
         items: [
           {
             id: "nov-s1-lundi",
-            title: "Lundi - Riz aux légumes et sauté de tofu",
-            description: "Riz parfumé, légumes de saison, tofu sauté aux épices créoles",
+            title: "Monday - Rice with vegetables and tofu stir-fry",
+            description:
+              "Fragrant rice, seasonal vegetables, tofu stir-fried with creole spices",
             price: "$10",
           },
           {
             id: "nov-s1-mardi",
-            title: "Mardi - Purée de pomme de terre et ragout de viande végétal au bœuf",
-            description: "Purée crémeuse, ragout de protéine végétale au bœuf",
+            title: "Tuesday - Mashed potatoes and beef vegetable protein stew",
+            description: "Creamy mashed potatoes, beef vegetable protein stew",
             price: "$10",
           },
           {
             id: "nov-s1-mercredi",
-            title: "Mercredi - Salade de carotte et piment avec pain nan",
-            description: "Salade de carottes épicée au piment, pain nan traditionnel",
+            title: "Wednesday - Carrot and chili salad with nan bread",
+            description: "Spicy carrot salad with chili, traditional nan bread",
             price: "$10",
           },
           {
             id: "nov-s1-jeudi",
-            title: "Jeudi - Burger de bœuf végétal",
-            description: "Burger végétarien avec galette de bœuf végétal et garnitures",
+            title: "Thursday - Vegetable beef burger",
+            description:
+              "Vegetarian burger with vegetable beef patty and toppings",
             price: "$10",
           },
         ],
       },
       {
         id: "novembre-semaine2",
-        title: "NOVEMBRE - SEMAINE 2",
+        title: "NOVEMBER - WEEK 2",
         image: "/Menu/CheeseMacorona.jpg",
-        imageAlt: "Spaghetti aux légumes",
+        imageAlt: "Spaghetti with vegetables",
         items: [
           {
             id: "nov-s2-lundi",
-            title: "Lundi - Riz blanc, Purée de pois brun, Légume de chou vert et carotte",
-            description: "Riz blanc, purée de pois bruns, chou vert et carottes sautés",
+            title:
+              "Monday - White rice, Brown pea puree, Green cabbage and carrot vegetables",
+            description:
+              "White rice, brown pea puree, sautéed green cabbage and carrots",
             price: "$10",
           },
           {
             id: "nov-s2-mardi",
-            title: "Mardi - Spaghetti et sauce aux légumes diverses",
-            description: "Spaghetti avec sauce riche aux légumes variés de saison",
+            title: "Tuesday - Spaghetti with various vegetable sauce",
+            description:
+              "Spaghetti with rich sauce made from various seasonal vegetables",
             price: "$10",
           },
           {
             id: "nov-s2-mercredi",
-            title: "Mercredi - Salade de chou et pain",
-            description: "Salade de chou fraîche, vinaigrette créole, pain frais",
+            title: "Wednesday - Cabbage salad and bread",
+            description: "Fresh cabbage salad, creole vinaigrette, fresh bread",
             price: "$10",
           },
           {
             id: "nov-s2-jeudi",
-            title: "Jeudi - Sandwich froide au légume",
-            description: "Sandwich froid aux légumes frais et condiments maison",
+            title: "Thursday - Cold vegetable sandwich",
+            description:
+              "Cold sandwich with fresh vegetables and homemade condiments",
             price: "$10",
           },
         ],
       },
       {
         id: "novembre-semaine3",
-        title: "NOVEMBRE - SEMAINE 3",
+        title: "NOVEMBER - WEEK 3",
         image: "/Menu/BowlOfSomething.jpg",
-        imageAlt: "Lasagne végétarienne",
+        imageAlt: "Vegetarian lasagna",
         items: [
           {
             id: "nov-s3-lundi",
-            title: "Lundi - Riz au petit pois vert et brocoli/chou fleur",
-            description: "Riz aux petits pois verts, brocoli et chou-fleur vapeur",
+            title: "Monday - Rice with green peas and broccoli/cauliflower",
+            description:
+              "Rice with green peas, steamed broccoli and cauliflower",
             price: "$10",
           },
           {
             id: "nov-s3-mardi",
-            title: "Mardi - Lasagne végétarienne",
-            description: "Lasagne aux légumes et fromage, sauce tomate maison",
+            title: "Tuesday - Vegetarian lasagna",
+            description: "Vegetable and cheese lasagna, homemade tomato sauce",
             price: "$10",
           },
           {
             id: "nov-s3-mercredi",
-            title: "Mercredi - Salade de bébé épinard et quinoa",
-            description: "Salade de jeunes épinards, quinoa, vinaigrette légère",
+            title: "Wednesday - Baby spinach and quinoa salad",
+            description: "Baby spinach salad, quinoa, light vinaigrette",
             price: "$10",
           },
           {
             id: "nov-s3-jeudi",
-            title: "Jeudi - Ragout de bœuf végétal",
-            description: "Ragout consistant de protéine végétale au bœuf et légumes",
+            title: "Thursday - Beef vegetable protein stew",
+            description:
+              "Hearty stew with beef vegetable protein and vegetables",
             price: "$10",
           },
         ],
       },
       {
         id: "novembre-semaine4",
-        title: "NOVEMBRE - SEMAINE 4",
-        image: "/Menu/ChikenBreast.jpg",
-        imageAlt: "Pâté chinois végétarien",
+        title: "NOVEMBER - WEEK 4",
+        image: "/Menu/VegeterienFood.png",
+        imageAlt: "Vegetarian shepherd's pie",
         items: [
           {
             id: "nov-s4-lundi",
-            title: "Lundi - Pâté chinois au bœuf végétarien",
-            description: "Pâté chinois traditionnel avec bœuf végétarien et maïs",
+            title: "Monday - Vegetarian beef shepherd's pie",
+            description:
+              "Traditional shepherd's pie with vegetarian beef and corn",
             price: "$10",
           },
           {
             id: "nov-s4-mardi",
-            title: "Mardi - Pomme de terre au four, brocoli, galette de tofu",
-            description: "Pommes de terre au four, brocoli vapeur, galette de tofu grillée",
+            title: "Tuesday - Baked potato, broccoli, tofu patty",
+            description: "Baked potatoes, steamed broccoli, grilled tofu patty",
             price: "$10",
           },
           {
             id: "nov-s4-mercredi",
-            title: "Mercredi - Salade de couscous et pain",
-            description: "Salade de couscous aux légumes frais, pain artisanal",
+            title: "Wednesday - Couscous salad and bread",
+            description:
+              "Couscous salad with fresh vegetables, artisanal bread",
             price: "$10",
           },
           {
             id: "nov-s4-jeudi",
-            title: "Jeudi - Soupe de courge et gingembre et pain",
-            description: "Soupe crémeuse de courge au gingembre, pain frais",
+            title: "Thursday - Pumpkin and ginger soup with bread",
+            description: "Creamy pumpkin soup with ginger, fresh bread",
             price: "$10",
           },
         ],
@@ -245,128 +266,139 @@ export const menuConfigs: Record<string, MenuConfig> = {
       // DÉCEMBRE 2025 (1-22 décembre)
       {
         id: "decembre-semaine1",
-        title: "DÉCEMBRE - SEMAINE 1",
+        title: "DECEMBER - WEEK 1",
         image: "/Menu/Sandwitch.jpg",
-        imageAlt: "Hamburger de tofu",
+        imageAlt: "Tofu burger",
         items: [
           {
             id: "dec-s1-lundi",
-            title: "Lundi - Riz blanc, Purée de pois vert, Légume épinard",
-            description: "Riz blanc, purée de pois verts, épinards sautés aux épices",
+            title: "Monday - White rice, Green pea puree, Spinach vegetables",
+            description:
+              "White rice, green pea puree, spinach sautéed with spices",
             price: "$10",
           },
           {
             id: "dec-s1-mardi",
-            title: "Mardi - Pomme de terre purée et légume sauté et pois chiche",
-            description: "Purée de pommes de terre, légumes sautés, pois chiches épicés",
+            title:
+              "Tuesday - Mashed potatoes and stir-fried vegetables with chickpeas",
+            description:
+              "Mashed potatoes, stir-fried vegetables, spiced chickpeas",
             price: "$10",
           },
           {
             id: "dec-s1-mercredi",
-            title: "Mercredi - Salade césar de betterave et pain",
-            description: "Salade césar aux betteraves, vinaigrette créole, pain frais",
+            title: "Wednesday - Beet Caesar salad and bread",
+            description:
+              "Caesar salad with beets, creole vinaigrette, fresh bread",
             price: "$10",
           },
           {
             id: "dec-s1-jeudi",
-            title: "Jeudi - Hamburger de tofu et patate rizolé",
-            description: "Hamburger végétarien au tofu, patates rizolées croustillantes",
+            title: "Thursday - Tofu burger and crispy potatoes",
+            description: "Vegetarian tofu burger, crispy potato wedges",
             price: "$10",
           },
         ],
       },
       {
         id: "decembre-semaine2",
-        title: "DÉCEMBRE - SEMAINE 2",
+        title: "DECEMBER - WEEK 2",
         image: "/Menu/BowlOfSomething.jpg",
-        imageAlt: "Couscous végétarien",
+        imageAlt: "Vegetarian couscous",
         items: [
           {
             id: "dec-s2-lundi",
-            title: "Lundi - Couscous et viande végétarienne au bœuf",
-            description: "Couscous traditionnel avec protéine végétale au bœuf",
+            title: "Monday - Couscous with vegetarian beef",
+            description: "Traditional couscous with beef vegetable protein",
             price: "$10",
           },
           {
             id: "dec-s2-mardi",
-            title: "Mardi - Ragout de patate douce et légumes",
-            description: "Ragout consistant de patates douces et légumes de saison",
+            title: "Tuesday - Sweet potato and vegetable stew",
+            description:
+              "Hearty stew with sweet potatoes and seasonal vegetables",
             price: "$10",
           },
           {
             id: "dec-s2-mercredi",
-            title: "Mercredi - Quiche aux légumes",
-            description: "Quiche végétarienne aux légumes frais et fromage",
+            title: "Wednesday - Vegetable quiche",
+            description: "Vegetarian quiche with fresh vegetables and cheese",
             price: "$10",
           },
           {
             id: "dec-s2-jeudi",
-            title: "Jeudi - Pita au bœuf végétarien",
-            description: "Pain pita garni de bœuf végétarien et légumes frais",
+            title: "Thursday - Vegetarian beef pita",
+            description:
+              "Pita bread filled with vegetarian beef and fresh vegetables",
             price: "$10",
           },
         ],
       },
       {
         id: "decembre-semaine3",
-        title: "DÉCEMBRE - SEMAINE 3",
-        image: "/Menu/ChikenBreast.jpg",
-        imageAlt: "Pâté chinois végétarien",
+        title: "DECEMBER - WEEK 3",
+        image: "/Menu/Couscous.png",
+        imageAlt: "Vegetarian shepherd's pie",
         items: [
           {
             id: "dec-s3-lundi",
-            title: "Lundi - Riz noir et sauté de tofu",
-            description: "Riz noir parfumé, tofu sauté aux légumes et épices créoles",
+            title: "Monday - Black rice and tofu stir-fry",
+            description:
+              "Fragrant black rice, tofu stir-fried with vegetables and creole spices",
             price: "$10",
           },
           {
             id: "dec-s3-mardi",
-            title: "Mardi - Pâté chinois végé",
-            description: "Pâté chinois végétarien traditionnel avec protéines végétales",
+            title: "Tuesday - Vegetarian shepherd's pie",
+            description:
+              "Traditional vegetarian shepherd's pie with plant-based proteins",
             price: "$10",
           },
           {
             id: "dec-s3-mercredi",
-            title: "Mercredi - Salade verte et galette de tofu",
-            description: "Salade verte fraîche accompagnée de galette de tofu grillée",
+            title: "Wednesday - Green salad and tofu patty",
+            description: "Fresh green salad accompanied by grilled tofu patty",
             price: "$10",
           },
           {
             id: "dec-s3-jeudi",
-            title: "Jeudi - Soupe de carotte et pain",
-            description: "Soupe crémeuse de carottes aux épices, pain frais",
+            title: "Thursday - Carrot soup and bread",
+            description: "Creamy carrot soup with spices, fresh bread",
             price: "$10",
           },
         ],
       },
       {
         id: "decembre-semaine4",
-        title: "DÉCEMBRE - SEMAINE 4",
+        title: "DECEMBER - WEEK 4",
         image: "/Menu/CheeseMacorona.jpg",
-        imageAlt: "Lasagne végétarienne",
+        imageAlt: "Vegetarian lasagna",
         items: [
           {
             id: "dec-s4-lundi",
-            title: "Lundi - Quinoa et galette de tofu",
-            description: "Quinoa aux légumes accompagné d'une galette de tofu grillée",
+            title: "Monday - Quinoa and tofu patty",
+            description:
+              "Quinoa with vegetables accompanied by grilled tofu patty",
             price: "$10",
           },
           {
             id: "dec-s4-mardi",
-            title: "Mardi - Macaroni au tofu",
-            description: "Macaroni avec tofu sauté et sauce créole aux légumes",
+            title: "Tuesday - Macaroni with tofu",
+            description:
+              "Macaroni with stir-fried tofu and creole vegetable sauce",
             price: "$10",
           },
           {
             id: "dec-s4-mercredi",
-            title: "Mercredi - Riz blanc et sauté de légumes",
-            description: "Riz blanc parfumé, légumes variés sautés aux épices",
+            title: "Wednesday - White rice and vegetable stir-fry",
+            description:
+              "Fragrant white rice, mixed vegetables stir-fried with spices",
             price: "$10",
           },
           {
             id: "dec-s4-jeudi",
-            title: "Jeudi - Lasagne végétarienne",
-            description: "Lasagne aux légumes et fromage, sauce tomate maison",
+            title: "Thursday - Vegetarian lasagna",
+            description: "Vegetable and cheese lasagna, homemade tomato sauce",
             price: "$10",
           },
         ],
@@ -374,42 +406,43 @@ export const menuConfigs: Record<string, MenuConfig> = {
     ],
   },
   jus: {
-    title: "Jus",
+    title: "Juices",
     sections: [
       {
         id: "jus-naturels",
-        title: "JUS NATURELS",
+        title: "NATURAL JUICES",
         image: "/Menu/StrawberryJus.jpg",
-        imageAlt: "Jus frais et naturels",
+        imageAlt: "Fresh and natural juices",
         items: [
           {
             id: "jus-goyave",
-            title: "Jus de Goyave",
-            description: "Jus de goyave frais pressé, saveur tropicale authentique",
+            title: "Guava Juice",
+            description:
+              "Freshly pressed guava juice, authentic tropical flavor",
             price: "$5",
           },
           {
             id: "jus-gingembre",
-            title: "Jus de Gingembre",
-            description: "Jus de gingembre frais pressé, énergisant et épicé",
+            title: "Ginger Juice",
+            description: "Freshly pressed ginger juice, energizing and spicy",
             price: "$5",
           },
           {
             id: "jus-ananas",
-            title: "Jus d'Ananas",
-            description: "Jus d'ananas frais pressé, douceur tropicale",
+            title: "Pineapple Juice",
+            description: "Freshly pressed pineapple juice, tropical sweetness",
             price: "$5",
           },
           {
             id: "jus-carotte",
-            title: "Jus de Carotte",
-            description: "Jus de carotte frais pressé, riche en vitamines",
+            title: "Carrot Juice",
+            description: "Freshly pressed carrot juice, rich in vitamins",
             price: "$5",
           },
           {
             id: "jus-betterave-carotte",
-            title: "Jus de Betterave et Carotte",
-            description: "Mélange de betterave et carotte, détoxifiant et nutritif",
+            title: "Beet and Carrot Juice",
+            description: "Beet and carrot blend, detoxifying and nutritious",
             price: "$5",
           },
         ],
@@ -417,18 +450,19 @@ export const menuConfigs: Record<string, MenuConfig> = {
     ],
   },
   epices: {
-    title: "Épices Pump Fourchette",
+    title: "Bless Fourchette Spices",
     sections: [
       {
         id: "epices-vegetales",
-        title: "ÉPICES VÉGÉTALES",
+        title: "VEGETABLE SPICES",
         image: "/Menu/Epice.jpg",
-        imageAlt: "Épices végétales sans sel ajouté",
+        imageAlt: "Vegetable spices with no added salt",
         items: [
           {
             id: "epices-pump-fourchette",
-            title: "Épices Pump Fourchette",
-            description: "Épices faites avec des produits végétaux, pas de sel ajouté. Peuvent être utilisées pour assaisonner différentes nourritures concoctées à la maison.",
+            title: "Pump Fourchette Spices",
+            description:
+              "Spices made with vegetable products, no added salt. Can be used to season different foods prepared at home.",
             price: "$10",
           },
         ],

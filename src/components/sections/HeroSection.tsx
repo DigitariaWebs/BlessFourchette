@@ -32,7 +32,7 @@ export function HeroSection() {
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl lg:text-3xl font-medium drop-shadow-lg max-w-4xl">
-          Nourrir et servir selon nos valeurs et croyances
+          Nourish and serve according to our values and beliefs
         </p>
       </div>
 

@@ -10,7 +10,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <h3 className="text-2xl font-bold mb-4">BLESS FOURCHETTE</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Nourrir avec foi, partager avec amour.
+              Nourish with faith, share with love.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ export function Footer() {
                 href="/"
                 className="block text-gray-300 hover:text-[var(--color-accent)] transition-colors duration-200"
               >
-                Accueil
+                Home
               </Link>
               <Link 
                 href="/menu"
@@ -36,7 +36,7 @@ export function Footer() {
                 href="#a-propos"
                 className="block text-gray-300 hover:text-[var(--color-accent)] transition-colors duration-200"
               >
-                Notre Histoire
+                Our Story
               </Link>
               <Link 
                 href="#contact"
@@ -75,20 +75,20 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-600">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Bless Fourchette. Tous droits réservés.
+              © {new Date().getFullYear()} Bless Fourchette. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <Link 
                 href="/privacy"
                 className="text-gray-400 hover:text-[var(--color-accent)] transition-colors duration-200"
               >
-                Politique de confidentialité
+                Privacy Policy
               </Link>
               <Link 
                 href="/terms"
                 className="text-gray-400 hover:text-[var(--color-accent)] transition-colors duration-200"
               >
-                Conditions d&apos;utilisation
+                Terms of Use
               </Link>
             </div>
           </div>

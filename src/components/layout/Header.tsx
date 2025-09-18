@@ -25,13 +25,13 @@ export default function Header() {
               href="/#accueil"
               className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
-              Accueil
+              Home
             </Link>
             <Link
               href="#notre-histoire"
               className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
-              À Propos
+              About
             </Link>
             <Link
               href="/#services"
