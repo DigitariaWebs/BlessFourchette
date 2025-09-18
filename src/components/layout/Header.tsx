@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-[var(--color-primary)] text-white shadow-lg">
+    <header className="sticky top-0 z-50 bg-[var(--color-secondary)] text-white shadow-lg">
       <div className="container mx-auto px-10 py-4">
         <div className="flex items-center justify-between relative">
           {/* Logo on the left */}
@@ -21,34 +21,34 @@ export function Header() {
           {/* Navigation in the middle */}
           <nav className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
             <a
+              href="#accueil"
+              className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
+            >
+              Accueil
+            </a>
+            <a
+              href="#a-propos"
+              className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
+            >
+              À Propos
+            </a>
+            <a
               href="#services"
-              className="px-3 py-2 hover:text-[var(--color-secondary)] transition-colors font-medium"
+              className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
               Services
             </a>
             <a
-              href="#mission"
-              className="px-3 py-2 hover:text-[var(--color-secondary)] transition-colors font-medium"
+              href="#menu"
+              className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
-              Mission
-            </a>
-            <a
-              href="#tarifs"
-              className="px-3 py-2 hover:text-[var(--color-secondary)] transition-colors font-medium"
-            >
-              Tarifs
-            </a>
-            <a
-              href="#activites"
-              className="px-3 py-2 hover:text-[var(--color-secondary)] transition-colors font-medium"
-            >
-              Activités
+              Menu
             </a>
           </nav>
 
           {/* Contact button on the right */}
           <div className="hidden md:block">
-            <Button variant="secondary" size="sm">
+            <Button variant="default" size="sm">
               <Phone className="h-4 w-4 mr-2" />
               Contact
             </Button>
