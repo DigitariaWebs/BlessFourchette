@@ -22,22 +22,22 @@ export default function Header() {
           {/* Navigation in the middle */}
           <nav className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
             <Link
-              href="/#accueil"
+              href="/#home"
               className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
               Home
             </Link>
             <Link
-              href="#notre-histoire"
+              href="/#about-us"
               className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
               About
             </Link>
             <Link
-              href="/#services"
+              href="/#how-to-order"
               className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
-              Services
+              How to Order
             </Link>
             <Link
               href="/menu"

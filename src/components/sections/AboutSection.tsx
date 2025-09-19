@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function AboutSection() {
   return (
-    <section id="notre-histoire" className="bg-[var(--color-muted)]">
+    <section id="about-us">
       {/* Title Section */}
       <div className="relative min-h-[40vh] pt-6 flex items-center justify-center">
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -64,6 +64,7 @@ export function AboutSection() {
               src="/AboutSection/ASharedTable.png"
               alt="A shared table with family and friends enjoying a meal together"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -71,7 +72,7 @@ export function AboutSection() {
       </div>
 
       {/* Giving Back Section */}
-      <div className="bg-[var(--color-muted)] to-white py-20 px-6">
+      <div className=" to-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6">
@@ -87,12 +88,13 @@ export function AboutSection() {
                 src="/AboutSection/HandsOfCompassion.png"
                 alt="Hands of compassion nurturing growth and life"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
 
             <div className="space-y-6 order-1 md:order-2">
-              <p className="text-xl text-[var(--color-muted-foreground)] leading-relaxed">
+              <p className="text-xl text-[var(--color-foreground)] leading-relaxed">
                 A portion of every dollar you spend actively supports the fight
                 against sickle cell anemia. We are proud to contribute to
                 medical research, patient support, and awareness programs.
@@ -165,6 +167,7 @@ export function AboutSection() {
               src="/AboutSection/HandsPreparingHealthyFood.png"
               alt="Professional chef hands preparing healthy, nutritious food with care"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

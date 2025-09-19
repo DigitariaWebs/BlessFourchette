@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section id="accueil" className="relative h-screen overflow-hidden">
+    <section id="home" className="relative h-screen overflow-hidden">
       {/* Background Image */}
       <Image
         src="/HeroSection.jpg"
@@ -15,7 +15,7 @@ export function HeroSection() {
       {/* Content Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10">
         {/* Favicon/Logo */}
-        <div className="mb-8">
+        <div className="mb-3">
           <Image
             src="/favicon.png"
             alt="Bless Fourchette Logo"
