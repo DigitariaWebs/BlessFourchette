@@ -45,14 +45,22 @@ export default function Header() {
             >
               Menu
             </Link>
+            <Link
+              href="/#contact-faq"
+              className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
+            >
+              FAQ
+            </Link>
           </nav>
 
           {/* Contact button on the right */}
           <div className="hidden md:block">
-            <Button variant="default" size="sm">
-              <Phone className="h-4 w-4 mr-2" />
-              Contact
-            </Button>
+            <Link href="/#contact-faq">
+              <Button variant="default" size="sm">
+                <Phone className="h-4 w-4 mr-2" />
+                Contact
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
