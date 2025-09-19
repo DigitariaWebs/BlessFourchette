@@ -20,7 +20,7 @@ export interface MenuConfig {
 }
 
 export const menuConfigs: Record<string, MenuConfig> = {
-  ecole: {
+  school: {
     title: "School Menu",
     notes: [
       "Menus are available Monday through Thursday",
@@ -406,42 +406,42 @@ export const menuConfigs: Record<string, MenuConfig> = {
       },
     ],
   },
-  jus: {
+  juices: {
     title: "Juices",
     sections: [
       {
-        id: "jus-naturels",
+        id: "natural-juices",
         title: "NATURAL JUICES",
         image: "/Menu/StrawberryJus.jpg",
         imageAlt: "Fresh and natural juices",
         items: [
           {
-            id: "jus-goyave",
+            id: "guava-juice",
             title: "Guava Juice",
             description:
               "Freshly pressed guava juice, authentic tropical flavor",
             price: "$5",
           },
           {
-            id: "jus-gingembre",
+            id: "ginger-juice",
             title: "Ginger Juice",
             description: "Freshly pressed ginger juice, energizing and spicy",
             price: "$5",
           },
           {
-            id: "jus-ananas",
+            id: "pineapple-juice",
             title: "Pineapple Juice",
             description: "Freshly pressed pineapple juice, tropical sweetness",
             price: "$5",
           },
           {
-            id: "jus-carotte",
+            id: "carrot-juice",
             title: "Carrot Juice",
             description: "Freshly pressed carrot juice, rich in vitamins",
             price: "$5",
           },
           {
-            id: "jus-betterave-carotte",
+            id: "beet-carrot-juice",
             title: "Beet and Carrot Juice",
             description: "Beet and carrot blend, detoxifying and nutritious",
             price: "$5",
@@ -450,17 +450,17 @@ export const menuConfigs: Record<string, MenuConfig> = {
       },
     ],
   },
-  epices: {
+  spices: {
     title: "Bless Fourchette Spices",
     sections: [
       {
-        id: "epices-vegetales",
+        id: "vegetable-spices",
         title: "VEGETABLE SPICES",
         image: "/Menu/Epice.jpg",
         imageAlt: "Vegetable spices with no added salt",
         items: [
           {
-            id: "epices-pump-fourchette",
+            id: "pump-fourchette-spices",
             title: "Pump Fourchette Spices",
             description:
               "Spices made with vegetable products, no added salt. Can be used to season different foods prepared at home.",
@@ -470,7 +470,7 @@ export const menuConfigs: Record<string, MenuConfig> = {
       },
     ],
   },
-  famille: {
+  family: {
     title: "Family Menu",
     notes: [
       "Coming Soon on October 1st, 2025! ",
@@ -481,27 +481,27 @@ export const menuConfigs: Record<string, MenuConfig> = {
     ],
     sections: [
       {
-        id: "famille-coming-soon",
+        id: "family-coming-soon",
         title: "FAMILY FEAST - COMING OCTOBER 1ST, 2025",
         image: "/comingsoon.png",
         imageAlt: "Delicious family meal preparations coming soon",
         items: [
           {
-            id: "famille-announcement",
-            title: "🍽️ Family Menu Launch - October 1st, 2025",
+            id: "family-announcement",
+            title: "Family Menu Launch - October 1st, 2025",
             description:
               "We're excited to announce our new Family Menu! Perfect for family gatherings, weekend meals, and special occasions. Our chefs are preparing generous portions of hearty, wholesome meals that will bring your family together around the table. Stay tuned for more details!",
             price: "Coming Soon",
           },
           {
-            id: "famille-features",
+            id: "family-features",
             title: "What to Expect",
             description:
               "• Family-sized portions (4-6 servings)\n• Weekly rotating menu with seasonal ingredients\n• Mix of traditional and modern fusion dishes\n• Vegetarian and vegan options available\n• Special holiday menus",
             price: "Starting at $45",
           },
           {
-            id: "famille-preorder",
+            id: "family-preorder",
             title: "Pre-Order Information",
             description:
               "Pre-orders will open on September 25th, 2025. Be among the first families to experience our new menu! Follow us on social media or subscribe to our newsletter for updates and exclusive early access offers.",
@@ -513,6 +513,6 @@ export const menuConfigs: Record<string, MenuConfig> = {
   },
 };
 
-export const getMenuConfig = (menuType: string = 'ecole'): MenuConfig => {
-  return menuConfigs[menuType] || menuConfigs.ecole;
+export const getMenuConfig = (menuType: string = 'school'): MenuConfig => {
+  return menuConfigs[menuType] || menuConfigs.school;
 };

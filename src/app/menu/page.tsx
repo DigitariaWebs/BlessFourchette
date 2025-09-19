@@ -10,7 +10,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 function MenuContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const menuType = (searchParams.get("type") as string) || "ecole";
+  const menuType = (searchParams.get("type") as string) || "school";
   const menuConfig = getMenuConfig(menuType);
 
   const categories = [
@@ -21,21 +21,21 @@ function MenuContent() {
   ];
 
   const handleCategoryClick = (category: string) => {
-    let newMenuType = "ecole"; // default
+    let newMenuType = "school"; // default
 
     if (category === "School Menu") {
-      newMenuType = "ecole";
+      newMenuType = "school";
     } else if (category === "Family Menu") {
-      newMenuType = "famille";
+      newMenuType = "family";
     } else if (category === "Juices") {
-      newMenuType = "jus";
+      newMenuType = "juices";
     } else if (category === "Bless Fourchette Spices") {
-      newMenuType = "epices";
+      newMenuType = "spices";
     }
 
     // Update the URL with the new menu type
     const newSearchParams = new URLSearchParams(searchParams.toString());
-    if (newMenuType === "ecole") {
+    if (newMenuType === "school") {
       newSearchParams.delete("type"); // Remove type param for default
     } else {
       newSearchParams.set("type", newMenuType);
@@ -53,11 +53,11 @@ function MenuContent() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-stone-50 py-10 relative overflow-hidden">
+      <section className="min-h-[90vh] py-10 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Title */}
           <div className="text-center mb-2">
-            <h1 className="text-4xl lg:text-6xl font-light text-[#1a4d3a] tracking-wider uppercase">
+            <h1 className="text-4xl lg:text-6xl font-semibold text-[#1a4d3a] tracking-wider uppercase">
               {menuConfig.title}
             </h1>
           </div>
@@ -67,9 +67,9 @@ function MenuContent() {
             <Image
               src="/Menu/HeroSection.png"
               alt="Menu - Decorative food on forks"
-              className="w-full h-auto max-w-7xl mx-auto rounded-lg shadow-md"
+              className="w-full h-auto max-w-7xl mx-auto rounded-lg pt-10 pb-5"
               width={1200}
-              height={300}
+              height={700}
               priority
             />
           </div>
@@ -82,7 +82,7 @@ function MenuContent() {
                 onClick={() => handleCategoryClick(category)}
                 className={
                   category === menuConfig.title
-                    ? "bg-[#7cb342] text-white px-6 py-3 rounded-lg font-medium text-sm tracking-wide hover:bg-[#1a4d3a] transition-colors duration-200"
+                    ? "bg-[#7cb342] text-white px-6 py-3 rounded-lg font-medium text-sm tracking-wide transition-colors duration-200"
                     : "bg-transparent text-[#1a4d3a] px-6 py-3 rounded-lg font-medium text-sm tracking-wide border border-[#1a4d3a] hover:bg-[#7cb342] hover:text-white transition-all duration-200 cursor-pointer"
                 }
               >
@@ -93,16 +93,20 @@ function MenuContent() {
         </div>
       </section>
 
-      {/* Menu Notes Section - Only for École menu */}
+      {/* Menu Notes Section - Only for School menu */}
       {menuConfig.notes && menuConfig.notes.length > 0 && (
         <section className="py-8 bg-stone-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold text-[#1a4d3a] mb-4">Important Notes:</h3>
+              <h3 className="text-lg font-semibold text-[#1a4d3a] mb-4">
+                Important Notes:
+              </h3>
               <ul className="space-y-2">
                 {menuConfig.notes.map((note, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-[#7cb342] font-bold mr-2">{index + 1}.</span>
+                    <span className="text-[#7cb342] font-bold mr-2">
+                      {index + 1}.
+                    </span>
                     <span className="text-gray-700">{note}</span>
                   </li>
                 ))}
@@ -116,10 +120,10 @@ function MenuContent() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {menuConfig.sections.map((section, sectionIndex) => (
-            <div 
-              key={section.id} 
+            <div
+              key={section.id}
               className={`mb-10 p-8 rounded-lg ${
-                sectionIndex % 2 === 1 ? 'bg-stone-50' : 'bg-white'
+                sectionIndex % 2 === 1 ? "bg-stone-50" : "bg-white"
               }`}
             >
               <div

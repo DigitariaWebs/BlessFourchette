@@ -45,21 +45,21 @@ export function AboutSection() {
                 </svg>
               </div>
               <blockquote className="relative z-10">
-                <p className="text-2xl md:text-3xl font-serif italic text-[var(--color-secondary)] leading-relaxed mb-4">
+                <p className="text-1xl md:text-2xl font-serif italic text-[var(--color-secondary)] leading-relaxed mb-4">
                   &quot;And God said: Behold, I have given you every herb
                   bearing seed, which is upon the face of all the earth, and
                   every tree, in which is the fruit of a tree yielding seed; to
                   you it shall be for meat.&quot;
                 </p>
                 <cite className="text-lg font-semibold text-[var(--color-accent)]">
-                  — Genèse 1:29
+                  — Genesis 1:29
                 </cite>
               </blockquote>
             </div>
           </div>
 
           {/* Shared table image */}
-          <div className="relative h-96 md:h-[600px] rounded-2xl overflow-hidden">
+          <div className="relative h-96 md:h-[540px] rounded-2xl overflow-hidden">
             <Image
               src="/AboutSection/ASharedTable.png"
               alt="A shared table with family and friends enjoying a meal together"
