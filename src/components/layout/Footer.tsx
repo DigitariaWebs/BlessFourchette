@@ -118,7 +118,7 @@ export function Footer() {
                       Mon-Thur: Open for school lunch orders
                     </span>
                     <span className="block">Mon-Fri: Open for families orders</span>
-                    <span className="block">Sat-Sun: closed</span>
+                    <span className="block">Sat-Sun: Closed</span>
                   </p>
                 </div>
               </div>
