@@ -27,7 +27,8 @@ export const menuConfigs: Record<string, MenuConfig> = {
       "Orders can be placed for the full month, or every Sunday until noon",
       "Menus will be changed every month",
     "School menu available starting October 15th",
-    "We’re offering a free vegan BBQ (Beyond Meat, vegan cheese, and more) to every school in June, fully covered by us."
+    "We’re offering a free vegan BBQ (Beyond Meat, vegan cheese, and more) to every school in June, fully covered by us.",
+    "Fruit juice is included with every meal !"
     ],
     sections: [
       // OCTOBRE 2025 (15-30 octobre)
@@ -415,6 +416,7 @@ export const menuConfigs: Record<string, MenuConfig> = {
       "Perfect portions for families of 4-6 people",
       "Stay tuned for amazing family-friendly dishes!",
       "Delivery available only Friday 11:00 AM to 4:00 PM",
+      "Fruit juice is included with every meal !"
     ],
     sections: [
       {
