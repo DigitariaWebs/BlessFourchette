@@ -31,9 +31,14 @@ export function HeroSection() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl lg:text-3xl font-medium drop-shadow-lg max-w-4xl">
-          Nourish and serve according to our values and beliefs
-        </p>
+        <section className=" max-w-4xl flex flex-col gap-5 justify-center items-center">
+          <p className="text-xl md:text-2xl lg:text-3xl font-medium drop-shadow-lg">Nourish and serve according to our values and beliefs</p>
+          <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[var(--color-secondary)] to-transparent" />
+          <p className="text-md md:text-xl lg:text-2xl font-medium drop-shadow-lg max-w-4xl text-[var(--color-secondary)] px-2">
+            We proudly offer Canado-Haitian cuisine, featuring two distinct culinary styles: flavorful, traditional Haitian dishes and comforting Canadian classics. All meals are 100% vegan, fresh, and thoughtfully prepared to highlight the richness of each cuisine.
+          </p>
+        </section>
+        
       </div>
 
       {/* Optional dark overlay for better text readability */}

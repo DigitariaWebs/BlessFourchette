@@ -101,10 +101,10 @@ export function Footer() {
                 <Phone className="h-5 w-5 text-[var(--color-accent)] mt-0.5 flex-shrink-0" />
                 <div>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+18199623677"
                     className="text-gray-300 hover:text-[var(--color-accent)] transition-colors duration-300 block"
                   >
-                    +1 (234) 567-8900
+                    +1 (819) 962-3677
                   </a>
                   <span className="text-gray-400 text-sm">Call for orders</span>
                 </div>
@@ -115,9 +115,10 @@ export function Footer() {
                 <div>
                   <p className="text-gray-300 text-sm leading-relaxed">
                     <span className="block font-medium">
-                      Mon-Fri: 11:00 AM - 9:00 PM
+                      Mon-Thur: Open for school lunch orders
                     </span>
-                    <span className="block">Sat-Sun: 12:00 PM - 10:00 PM</span>
+                    <span className="block">Mon-Fri: Open for families orders</span>
+                    <span className="block">Sat-Sun: closed</span>
                   </p>
                 </div>
               </div>

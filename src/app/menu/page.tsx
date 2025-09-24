@@ -15,9 +15,7 @@ function MenuContent() {
 
   const categories = [
     "School Menu",
-    "Family Menu",
-    "Bless Fourchette Spices",
-    "Juices",
+    "Family Menu"
   ];
 
   const handleCategoryClick = (category: string) => {
@@ -27,11 +25,7 @@ function MenuContent() {
       newMenuType = "school";
     } else if (category === "Family Menu") {
       newMenuType = "family";
-    } else if (category === "Juices") {
-      newMenuType = "juices";
-    } else if (category === "Bless Fourchette Spices") {
-      newMenuType = "spices";
-    }
+    } 
 
     // Update the URL with the new menu type
     const newSearchParams = new URLSearchParams(searchParams.toString());

@@ -13,16 +13,12 @@ const faqData: FAQItem[] = [
     answer: "Orders must be placed by 6:00 PM the day before delivery. For example, to receive meals on Monday, you must order by Sunday at 6:00 PM. This ensures we have enough time to prepare fresh, quality meals for everyone."
   },
   {
-    question: "How do you handle food allergies and dietary restrictions?",
-    answer: "We take allergies and dietary restrictions very seriously. Please specify any allergies or dietary needs in the special instructions section when placing your order. We can accommodate most dietary restrictions including vegetarian, gluten-free, and nut-free options. Our kitchen follows strict protocols to prevent cross-contamination."
-  },
-  {
     question: "Can I modify or cancel my order after placing it?",
-    answer: "Yes, you can modify or cancel your order up to 6:00 PM the day before delivery. After this deadline, we cannot guarantee changes as meal preparation may have already begun. Please contact us as soon as possible if you need to make changes."
+    answer: "Yes, you can modify or cancel your order up to 6:00 PM the day before delivery. After this deadline, we cannot guarantee changes as meal preparation may have already begun. However, if a student will be absent, please notify us by email no later than 7:00 AM on the day of delivery. The order will be canceled and a full refund will be automatically applied to your account and deducted from your next invoice."
   },
   {
     question: "What areas do you deliver to?",
-    answer: "We currently deliver to schools and families within our service area. During checkout, you can enter your address to confirm delivery availability. If you're outside our current delivery zone, pickup options are available at our location."
+    answer: "We currently deliver to schools and families within our service area. During checkout, you can enter your address to confirm delivery availability. Please note: No delivery fee for school orders, a delivery fee will be applied to family orders only"
   },
   {
     question: "How do I track my order?",
@@ -163,7 +159,7 @@ export function ContactAndFaqSection() {
 
                 {/* Phone */}
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+18199623677"
                   className="flex items-start gap-4 p-4 rounded-xl hover:bg-[var(--color-muted)]/30 transition-colors duration-200 group cursor-pointer"
                 >
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
@@ -186,44 +182,15 @@ export function ContactAndFaqSection() {
                       Phone
                     </h4>
                     <span className="text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors duration-200 font-medium">
-                      (123) 456-7890
+                     (819) 962-3677
                     </span>
                   </div>
                 </a>
 
-                {/* Phone 2 */}
-                <a
-                  href="tel:+1234567891"
-                  className="flex items-start gap-4 p-4 rounded-xl hover:bg-[var(--color-muted)]/30 transition-colors duration-200 group cursor-pointer"
-                >
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[var(--color-secondary)] mb-1 transition-colors duration-200">
-                      Phone 2
-                    </h4>
-                    <span className="text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors duration-200 font-medium">
-                      (123) 456-7891
-                    </span>
-                  </div>
-                </a>
-
+                
                 {/* Location */}
                 <a
-                  href="https://maps.google.com/?q=123+Healthy+Street+Montreal+QC"
+                  href="https://maps.google.com/?q=36+rue+Martineau+Gatineau+QC+J8P7Y7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-4 rounded-xl hover:bg-[var(--color-muted)]/30 transition-colors duration-200 group cursor-pointer"
@@ -255,8 +222,7 @@ export function ContactAndFaqSection() {
                     </h4>
                     <div className="text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors duration-200">
                       <p>
-                        123 Healthy Street, Fresh Food District, Montreal, QC
-                        H1A 2B3
+                       36 rue Martineau, Gatineau, QC J8P 7Y7
                       </p>
                     </div>
                   </div>

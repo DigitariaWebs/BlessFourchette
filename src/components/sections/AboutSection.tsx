@@ -1,8 +1,146 @@
+"use client"
+
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 export function AboutSection() {
+  // Tailwind height classes for each image
+  const imageHeightClasses = [
+    "h-48 md:h-80", // 200px mobile, 350px desktop
+    "h-44 md:h-64", // 180px mobile, 280px desktop  
+    "h-40 md:h-56", // 160px mobile, 240px desktop
+    "h-44 md:h-64", // 180px mobile, 280px desktop
+    "h-48 md:h-80"  // 200px mobile, 350px desktop
+  ]
+  
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  }
+
+  const imageVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.8
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1
+    }
+  }
+
+  const hoverVariants = {
+    hover: {
+      scale: 1.02,
+      y: -5
+    }
+  }
+
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    hover: {
+      opacity: 1
+    }
+  }
+
+  const imageData = [
+    {
+      src: "/AboutSection/djondjonriz.webp",
+      alt: "Haitian black rice jonjon",
+      title: "Djon Djon Rice"
+    },
+    {
+      src: "/AboutSection/Plantains.png",
+      alt: "Smashed fried plantains",
+      title: "Fried Plantains"
+    },
+    {
+      src: "/AboutSection/pureePoidsNoir.jpg",
+      alt: "Black bean purée and white rice",
+      title: "Black Bean Purée"
+    },
+    {
+      src: "/AboutSection/rizcolle.jpg",
+      alt: "Haitian red beans and rice",
+      title: "Red Beans & Rice"
+    },
+    {
+      src: "/AboutSection/saladeBettrave.jpg",
+      alt: "beet salad",
+      title: "Beet Salad"
+    }
+  ]
+
   return (
     <section id="about-us">
+      {/* Food pictures Section */}
+      <motion.div 
+        className="flex flex-col md:flex-row gap-4 mt-10 justify-center items-center md:items-end w-full overflow-hidden px-4"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        {imageData.map((image, index) => (
+          <motion.div
+            key={index}
+            className={`relative group cursor-pointer w-full md:flex-1 ${imageHeightClasses[index]}`}
+            variants={imageVariants}
+            whileHover="hover"
+            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            <motion.div
+              className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg"
+              variants={hoverVariants}
+              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 20vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              
+              {/* Overlay */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+              
+              {/* Content overlay */}
+              <motion.div
+                className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <motion.h3
+                  className="text-lg font-bold"
+                  initial={{ y: 20, opacity: 0 }}
+                  whileHover={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.1, duration: 0.3 }}
+                >
+                  {image.title}
+                </motion.h3>
+              </motion.div>
+              
+              {/* Decorative elements */}
+              <motion.div
+                className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full backdrop-blur-sm"
+                initial={{ scale: 0, rotate: -180 }}
+                whileHover={{ scale: 1, rotate: 0 }}
+                transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+              />
+            </motion.div>
+          </motion.div>
+        ))}
+      </motion.div>
       {/* Title Section */}
       <div className="relative min-h-[40vh] pt-6 flex items-center justify-center">
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">

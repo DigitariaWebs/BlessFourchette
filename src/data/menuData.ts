@@ -26,7 +26,7 @@ export const menuConfigs: Record<string, MenuConfig> = {
       "Menus are available Monday through Thursday",
       "Orders can be placed for the full month, or every Sunday until noon",
       "Menus will be changed every month",
-    "School menu available starting October 15th 2025",
+    "School menu available starting October 15th",
     ],
     sections: [
       // OCTOBRE 2025 (15-30 octobre)
@@ -401,70 +401,6 @@ export const menuConfigs: Record<string, MenuConfig> = {
             title: "Thursday - Vegetarian lasagna",
             description: "Vegetable and cheese lasagna, homemade tomato sauce",
             price: "$8",
-          },
-        ],
-      },
-    ],
-  },
-  juices: {
-    title: "Juices",
-    sections: [
-      {
-        id: "natural-juices",
-        title: "NATURAL JUICES",
-        image: "/Menu/StrawberryJus.jpg",
-        imageAlt: "Fresh and natural juices",
-        items: [
-          {
-            id: "guava-juice",
-            title: "Guava Juice",
-            description:
-              "Freshly pressed guava juice, authentic tropical flavor",
-            price: "$5",
-          },
-          {
-            id: "ginger-juice",
-            title: "Ginger Juice",
-            description: "Freshly pressed ginger juice, energizing and spicy",
-            price: "$5",
-          },
-          {
-            id: "pineapple-juice",
-            title: "Pineapple Juice",
-            description: "Freshly pressed pineapple juice, tropical sweetness",
-            price: "$5",
-          },
-          {
-            id: "carrot-juice",
-            title: "Carrot Juice",
-            description: "Freshly pressed carrot juice, rich in vitamins",
-            price: "$5",
-          },
-          {
-            id: "beet-carrot-juice",
-            title: "Beet and Carrot Juice",
-            description: "Beet and carrot blend, detoxifying and nutritious",
-            price: "$5",
-          },
-        ],
-      },
-    ],
-  },
-  spices: {
-    title: "Bless Fourchette Spices",
-    sections: [
-      {
-        id: "vegetable-spices",
-        title: "VEGETABLE SPICES",
-        image: "/Menu/Epice.jpg",
-        imageAlt: "Vegetable spices with no added salt",
-        items: [
-          {
-            id: "pump-fourchette-spices",
-            title: "Pump Fourchette Spices",
-            description:
-              "Spices made with vegetable products, no added salt. Can be used to season different foods prepared at home.",
-            price: "$10",
           },
         ],
       },
