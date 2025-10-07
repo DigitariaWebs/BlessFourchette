@@ -26,7 +26,7 @@ export const menuConfigs: Record<string, MenuConfig> = {
       "Menus are available Monday through Thursday",
       "Orders can be placed for the full month, or every Sunday until noon",
       "Menus will be changed every month",
-    "School menu available starting October 15th",
+    "School menu available starting November 1st",
     "We’re offering a free vegan BBQ (Beyond Meat, vegan cheese, and more) to every school in June, fully covered by us.",
     "Fruit juice is included with every meal !"
     ],
@@ -411,7 +411,7 @@ export const menuConfigs: Record<string, MenuConfig> = {
   family: {
     title: "Family Menu",
     notes: [
-      "Coming Soon on October 1st, 2025! ",
+      "Coming Soon on November 1st, 2025! ",
       "Our delicious family meals will be available for pre-order",
       "Perfect portions for families of 4-6 people",
       "Stay tuned for amazing family-friendly dishes!",
@@ -421,13 +421,13 @@ export const menuConfigs: Record<string, MenuConfig> = {
     sections: [
       {
         id: "family-coming-soon",
-        title: "FAMILY FEAST - COMING OCTOBER 1ST, 2025",
+        title: "FAMILY FEAST - COMING NOVEMBER 1ST, 2025",
         image: "/comingsoon.png",
         imageAlt: "Delicious family meal preparations coming soon",
         items: [
           {
             id: "family-announcement",
-            title: "Family Menu Launch - October 1st, 2025",
+            title: "Family Menu Launch - November 1st, 2025",
             description:
               "We're excited to announce our new Family Menu! Perfect for family gatherings, weekend meals, and special occasions. Our chefs are preparing generous portions of hearty, wholesome meals that will bring your family together around the table. Stay tuned for more details!",
             price: "Coming Soon",
