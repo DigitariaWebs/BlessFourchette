@@ -22,7 +22,7 @@ interface SessionData {
 
 function PaymentSuccessContent() {
   const searchParams = useSearchParams();
-  const sessionId = searchParams.get('session_id');
+  const sessionId = searchParams.get("session_id");
   const [session, setSession] = useState<SessionData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -30,28 +30,33 @@ function PaymentSuccessContent() {
 
   useEffect(() => {
     if (!sessionId) {
-      setError('No session ID found');
+      setError("No session ID found");
       setLoading(false);
       return;
     }
 
     const fetchSession = async () => {
       try {
-        const response = await fetch(`/api/checkout/session?session_id=${sessionId}`);
+        const response = await fetch(
+          `/api/checkout/session?session_id=${sessionId}`,
+        );
         const data = await response.json();
 
         if (!response.ok) {
-          throw new Error(data.error || 'Failed to fetch session');
+          throw new Error(data.error || "Failed to fetch session");
         }
 
-
         // Send receipt email if payment was successful
-        if (data.session.payment_status === 'paid' && data.session.customer_email && data.session.line_items) {
+        if (
+          data.session.payment_status === "paid" &&
+          data.session.customer_email &&
+          data.session.line_items
+        ) {
           try {
-            await fetch('/api/send-receipt', {
-              method: 'POST',
+            await fetch("/api/send-receipt", {
+              method: "POST",
               headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
               },
               body: JSON.stringify({
                 customerEmail: data.session.customer_email,
@@ -61,14 +66,14 @@ function PaymentSuccessContent() {
             });
             setReceiptSent(true);
           } catch (emailError) {
-            console.error('Failed to send receipt email:', emailError);
-            // Don't fail the whole page if email fails
+            console.error("Failed to send receipt email:", emailError);
           }
         }
         setSession(data.session);
       } catch (err) {
-        const errorMessage = err instanceof Error ? err.message : 'Unknown error';
-        console.error('Error fetching session:', err);
+        const errorMessage =
+          err instanceof Error ? err.message : "Unknown error";
+        console.error("Error fetching session:", err);
         setError(errorMessage);
       } finally {
         setLoading(false);
@@ -96,7 +101,7 @@ function PaymentSuccessContent() {
           <XCircle className="w-20 h-20 text-red-500 mx-auto mb-4" />
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Oops!</h1>
           <p className="text-gray-600 mb-6">
-            {error || 'Unable to retrieve payment information'}
+            {error || "Unable to retrieve payment information"}
           </p>
           <Link
             href="/menu"
@@ -109,7 +114,7 @@ function PaymentSuccessContent() {
     );
   }
 
-  const isSuccess = session.payment_status === 'paid';
+  const isSuccess = session.payment_status === "paid";
   const amount = (session.amount_total / 100).toFixed(2);
 
   return (
@@ -128,21 +133,28 @@ function PaymentSuccessContent() {
             </div>
 
             <div className="bg-gray-50 rounded-lg p-6 mb-6 text-left">
-              <h2 className="font-semibold text-gray-900 mb-3">Order Details</h2>
+              <h2 className="font-semibold text-gray-900 mb-3">
+                Order Details
+              </h2>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                {!receiptSent && ' (Receipt is being sent...)'}
                   <span className="text-gray-600">Order ID:</span>
-                  <span className="font-mono text-gray-900">{session.id.slice(-8).toUpperCase()}</span>
+                  <span className="font-mono text-gray-900">
+                    {session.id.slice(-8).toUpperCase()}
+                  </span>
                 </div>
                 {session.customer_email && (
                   <div className="flex justify-between">
                     <span className="text-gray-600">Email:</span>
-                    <span className="text-gray-900">{session.customer_email}</span>
+                    <span className="text-gray-900">
+                      {session.customer_email}
+                    </span>
                   </div>
                 )}
                 <div className="flex justify-between pt-2 border-t border-gray-200">
-                  <span className="text-gray-600 font-semibold">Total Paid:</span>
+                  <span className="text-gray-600 font-semibold">
+                    Total Paid:
+                  </span>
                   <span className="text-green-600 font-bold text-lg">
                     ${amount} {session.currency.toUpperCase()}
                   </span>
@@ -152,7 +164,8 @@ function PaymentSuccessContent() {
 
             <div className="space-y-3">
               <p className="text-sm text-gray-600">
-                A receipt email has been sent to {session.customer_email || 'your email'}.
+                A receipt email (with PDF attachment) has been sent to{" "}
+                {session.customer_email || "your email"}.
               </p>
               <Link
                 href="/menu"
@@ -192,14 +205,16 @@ function PaymentSuccessContent() {
 
 export default function PaymentSuccessPage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-amber-50 to-white">
-        <div className="text-center">
-          <Loader2 className="w-16 h-16 text-amber-600 animate-spin mx-auto mb-4" />
-          <p className="text-gray-600">Loading payment details...</p>
+    <Suspense
+      fallback={
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-amber-50 to-white">
+          <div className="text-center">
+            <Loader2 className="w-16 h-16 text-amber-600 animate-spin mx-auto mb-4" />
+            <p className="text-gray-600">Loading payment details...</p>
+          </div>
         </div>
-      </div>
-    }>
+      }
+    >
       <PaymentSuccessContent />
     </Suspense>
   );

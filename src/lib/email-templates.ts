@@ -253,3 +253,58 @@ If you didn't make this purchase, please contact us immediately.
 © ${new Date().getFullYear()} BlessFourchette. All rights reserved.
   `;
 };
+
+export const generateWalmartFormatReceipt = (data: ReceiptEmailData): string => {
+  const itemsText = data.items
+    .map((item) => {
+      const price = parseFloat(item.price.replace('$', ''));
+      const lineTotal = (price * item.quantity).toFixed(2);
+      return `${item.title.padEnd(35)} ${`$${lineTotal}`.padStart(10)}\n              Qty: ${item.quantity}`;
+    })
+    .join('\n\n');
+
+  const currentDate = new Date();
+  const dateTime = currentDate.toLocaleDateString('en-US', {
+    month: '2-digit',
+    day: '2-digit',
+    year: 'numeric',
+  }) + ' ' + currentDate.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true,
+  });
+
+  return `
+╔════════════════════════════════════════════╗
+║       BLESS FOURCHETTE RESTAURANT          ║
+║         ORDER RECEIPT (ADMIN)              ║
+╚════════════════════════════════════════════╝
+
+RECEIPT #:      ${data.orderId}
+DATE & TIME:    ${dateTime}
+CUSTOMER EMAIL: ${data.customerEmail}
+
+────────────────────────────────────────────
+
+ITEMS ORDERED:
+
+${itemsText}
+
+────────────────────────────────────────────
+
+                            SUBTOTAL: $${data.subtotal.toFixed(2)}
+                               TOTAL: $${data.total.toFixed(2)}
+
+────────────────────────────────────────────
+
+STATUS: PAYMENT RECEIVED - ORDER CONFIRMED
+
+────────────────────────────────────────────
+
+Thank you for your order!
+Please prepare the items listed above.
+
+Generated: ${new Date().toISOString()}
+`;
+};

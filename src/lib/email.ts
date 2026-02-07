@@ -23,27 +23,41 @@ export const verifyEmailConfig = async () => {
   }
 };
 
+interface Attachment {
+  filename: string;
+  content: Buffer;
+  contentType?: string;
+}
+
 interface EmailOptions {
   to: string;
   subject: string;
   html: string;
   text?: string;
+  attachments?: Attachment[];
 }
 
-export const sendEmail = async ({ to, subject, html, text }: EmailOptions) => {
+export const sendEmail = async ({
+  to,
+  subject,
+  html,
+  text,
+  attachments,
+}: EmailOptions) => {
   try {
     const info = await transporter.sendMail({
       from: `BlessFourchette <${process.env.SMTP_FROM}>`,
       to,
       subject,
-      text: text || '',
+      text: text || "",
       html,
+      attachments: attachments || [],
     });
 
-    console.log('Email sent:', info.messageId);
+    console.log("Email sent:", info.messageId);
     return { success: true, messageId: info.messageId };
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error("Error sending email:", error);
     return { success: false, error };
   }
 };
