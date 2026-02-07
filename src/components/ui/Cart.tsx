@@ -19,6 +19,7 @@ interface CartProps {
 export function Cart({ items, onUpdateQuantity, onRemoveItem, isOpen, onClose }: CartProps) {
   const [isProcessing, setIsProcessing] = useState(false);
   const [customerEmail, setCustomerEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
 
   const calculateTotal = () => {
     return items.reduce((total, item) => {
@@ -30,7 +31,15 @@ export function Cart({ items, onUpdateQuantity, onRemoveItem, isOpen, onClose }:
   const handleCheckout = async () => {
     if (items.length === 0) return;
 
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!customerEmail || !emailRegex.test(customerEmail)) {
+      setEmailError('Please enter a valid email address');
+      return;
+    }
+
     setIsProcessing(true);
+    setEmailError('');
 
     try {
       // Create checkout session
@@ -152,16 +161,28 @@ export function Cart({ items, onUpdateQuantity, onRemoveItem, isOpen, onClose }:
                 htmlFor="email" 
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Email (optional)
+                Email <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
                 id="email"
                 value={customerEmail}
-                onChange={(e) => setCustomerEmail(e.target.value)}
+                onChange={(e) => {
+                  setCustomerEmail(e.target.value);
+                  setEmailError('');
+                }}
                 placeholder="your@email.com"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                required
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent ${
+                  emailError ? 'border-red-500' : 'border-gray-300'
+                }`}
               />
+              {emailError && (
+                <p className="text-red-500 text-xs mt-1">{emailError}</p>
+              )}
+              <p className="text-xs text-gray-500 mt-1">
+                Required to send your order receipt
+              </p>
             </div>
 
             {/* Total */}

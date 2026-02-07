@@ -15,8 +15,23 @@ export async function GET(req: NextRequest) {
 
     // Retrieve the session with expanded line_items
     const session = await stripe.checkout.sessions.retrieve(sessionId, {
-      expand: ['line_items', 'payment_intent'],
+      expand: ['line_items', 'payment_intent', 'line_items.data.price.product'],
     });
+
+    // Extract line items with product details
+    const lineItems = session.line_items?.data.map(item => {
+      const product = item.price?.product;
+      const productDescription = typeof product === 'object' && product !== null && 'description' in product 
+        ? product.description 
+        : '';
+
+      return {
+        title: item.description || 'Item',
+        description: productDescription || '',
+        price: `$${((item.amount_total || 0) / 100).toFixed(2)}`,
+        quantity: item.quantity || 1,
+      };
+    }) || [];
 
     return NextResponse.json({
       session: {
@@ -26,6 +41,7 @@ export async function GET(req: NextRequest) {
         customer_email: session.customer_details?.email,
         amount_total: session.amount_total,
         currency: session.currency,
+        line_items: lineItems,
       }
     });
   } catch (error) {

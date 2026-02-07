@@ -22,7 +22,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "How do I track my order?",
-    answer: "After placing your order, you'll receive a confirmation email with tracking information. We'll send updates when your order is being prepared and when it's out for delivery. You can also contact us directly for real-time updates on your order status."
+    answer: "After placing your order, you'll receive a receipt email with tracking information. We'll send updates when your order is being prepared and when it's out for delivery. You can also contact us directly for real-time updates on your order status."
   },
   {
     question: "What payment methods do you accept?",

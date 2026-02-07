@@ -12,6 +12,12 @@ interface SessionData {
   customer_email: string;
   amount_total: number;
   currency: string;
+  line_items?: Array<{
+    title: string;
+    description: string;
+    price: string;
+    quantity: number;
+  }>;
 }
 
 function PaymentSuccessContent() {
@@ -20,6 +26,7 @@ function PaymentSuccessContent() {
   const [session, setSession] = useState<SessionData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [receiptSent, setReceiptSent] = useState(false);
 
   useEffect(() => {
     if (!sessionId) {
@@ -37,6 +44,27 @@ function PaymentSuccessContent() {
           throw new Error(data.error || 'Failed to fetch session');
         }
 
+
+        // Send receipt email if payment was successful
+        if (data.session.payment_status === 'paid' && data.session.customer_email && data.session.line_items) {
+          try {
+            await fetch('/api/send-receipt', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                customerEmail: data.session.customer_email,
+                orderId: data.session.id,
+                items: data.session.line_items,
+              }),
+            });
+            setReceiptSent(true);
+          } catch (emailError) {
+            console.error('Failed to send receipt email:', emailError);
+            // Don't fail the whole page if email fails
+          }
+        }
         setSession(data.session);
       } catch (err) {
         const errorMessage = err instanceof Error ? err.message : 'Unknown error';
@@ -103,6 +131,7 @@ function PaymentSuccessContent() {
               <h2 className="font-semibold text-gray-900 mb-3">Order Details</h2>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
+                {!receiptSent && ' (Receipt is being sent...)'}
                   <span className="text-gray-600">Order ID:</span>
                   <span className="font-mono text-gray-900">{session.id.slice(-8).toUpperCase()}</span>
                 </div>
@@ -123,7 +152,7 @@ function PaymentSuccessContent() {
 
             <div className="space-y-3">
               <p className="text-sm text-gray-600">
-                A confirmation email has been sent to {session.customer_email || 'your email'}.
+                A receipt email has been sent to {session.customer_email || 'your email'}.
               </p>
               <Link
                 href="/menu"

@@ -107,19 +107,34 @@ function MenuContent() {
 
           {/* Menu Categories */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => handleCategoryClick(category)}
-                className={
-                  category === menuConfig.title
-                    ? "bg-[#7cb342] text-white px-6 py-3 rounded-lg font-medium text-sm tracking-wide transition-colors duration-200"
-                    : "bg-transparent text-[#1a4d3a] px-6 py-3 rounded-lg font-medium text-sm tracking-wide border border-[#1a4d3a] hover:bg-[#7cb342] hover:text-white transition-all duration-200 cursor-pointer"
-                }
-              >
-                {category}
-              </button>
-            ))}
+            {categories.map((category) => {
+              // Determine if this category is active based on menu type
+              let isActive = false;
+              if (category === "School Menu" && menuType === "school") {
+                isActive = true;
+              } else if (category === "Family Menu" && menuType === "family") {
+                isActive = true;
+              } else if (
+                category === "Weekend Menu" &&
+                menuType === "weekend"
+              ) {
+                isActive = true;
+              }
+
+              return (
+                <button
+                  key={category}
+                  onClick={() => handleCategoryClick(category)}
+                  className={
+                    isActive
+                      ? "bg-[#7cb342] text-white px-6 py-3 rounded-lg font-medium text-sm tracking-wide transition-colors duration-200"
+                      : "bg-transparent text-[#1a4d3a] px-6 py-3 rounded-lg font-medium text-sm tracking-wide border border-[#1a4d3a] hover:bg-[#7cb342] hover:text-white transition-all duration-200 cursor-pointer"
+                  }
+                >
+                  {category}
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
