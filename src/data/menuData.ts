@@ -26,9 +26,9 @@ export const menuConfigs: Record<string, MenuConfig> = {
       "Menus are available Monday through Thursday",
       "Orders can be placed for the full month, or every Sunday until noon",
       "Menus will be changed every month",
-    "School menu available starting November 1st",
-    "We’re offering a free vegan BBQ (Beyond Meat, vegan cheese, and more) to every school in June, fully covered by us.",
-    "Fruit juice is included with every meal !"
+      "School menu available starting November 1st",
+      "We’re offering a free vegan BBQ (Beyond Meat, vegan cheese, and more) to every school in June, fully covered by us.",
+      "Fruit juice is included with every meal !",
     ],
     sections: [
       // OCTOBRE 2025 (15-30 octobre)
@@ -416,7 +416,7 @@ export const menuConfigs: Record<string, MenuConfig> = {
       "Perfect portions for families of 4-6 people",
       "Stay tuned for amazing family-friendly dishes!",
       "Delivery available only Friday 11:00 AM to 4:00 PM",
-      "Fruit juice is included with every meal !"
+      "Fruit juice is included with every meal !",
     ],
     sections: [
       {
@@ -445,6 +445,177 @@ export const menuConfigs: Record<string, MenuConfig> = {
             description:
               "Pre-orders will open on September 25th, 2025. Be among the first families to experience our new menu! Follow us on social media or subscribe to our newsletter for updates and exclusive early access offers.",
             price: "Reserve Now",
+          },
+        ],
+      },
+    ],
+  },
+  weekend: {
+    title: "Weekend Fritail Menu",
+    notes: [
+      "Available Friday through Sunday",
+      "Orders can be placed in advance",
+      "For group orders, please place in advance and specify desired delivery time",
+      "All meat choices are served with: acra, marinade, salted and sweet plantains, fried true conch (seasonal), pikliz, sauce, and choice of cod or herring fritters (chef's choice)",
+      "Choice of green salad or macaroni salad included",
+      "Rice options available as extras",
+    ],
+    sections: [
+      {
+        id: "meat-choices",
+        title: "CHOIX DE VIANDE - Meat Choices",
+        image: "/Menu/TassotBeefGoatLamb.jpg",
+        imageAlt: "Traditional Haitian meat dishes",
+        items: [
+          {
+            id: "boeuf-saute-epice",
+            title: "Tassot de bœuf sauté épicé - Spicy sautéed beef tassot",
+            description:
+              "Spicy sautéed beef tassot, served with traditional Haitian sides",
+            price: "$24.75",
+          },
+          {
+            id: "boeuf-frit",
+            title: "Tassot de bœuf frit - Fried beef tassot",
+            description:
+              "Fried beef tassot, served with traditional Haitian sides",
+            price: "$22.50",
+          },
+          {
+            id: "agneau-ail-thym",
+            title:
+              "Carré d'agneau à l'ail et thym - Garlic and thyme lamb rack",
+            description:
+              "Lamb rack with garlic and thyme, served with traditional Haitian sides",
+            price: "$30.00",
+          },
+          {
+            id: "tilapia",
+            title:
+              "Poisson tilapia sans arête sans peau - Boneless skinless tilapia",
+            description:
+              "Boneless skinless tilapia, served with traditional Haitian sides",
+            price: "$23.75",
+          },
+          {
+            id: "cabri-saute-epice",
+            title: "Tassot de cabri sauté épicé - Spicy sautéed goat tassot",
+            description:
+              "Spicy sautéed goat tassot, served with traditional Haitian sides",
+            price: "$29.75",
+          },
+          {
+            id: "cabri-frit",
+            title: "Tassot de cabri frit - Fried goat tassot",
+            description:
+              "Fried goat tassot, served with traditional Haitian sides",
+            price: "$27.75",
+          },
+        ],
+      },
+      {
+        id: "rice-extras",
+        title: "CHOIX DE RIZ EN EXTRA - Rice Options (Extra)",
+        image: "/Menu/HaitianRiceVarietiesDjon.jpg",
+        imageAlt: "Various rice options",
+        items: [
+          {
+            id: "riz-noir",
+            title: "Riz noir (jonjon) - Black rice",
+            description: "Traditional Haitian black rice",
+            price: "$6.00",
+          },
+          {
+            id: "riz-blanc",
+            title: "Riz blanc - White rice",
+            description: "Steamed white rice",
+            price: "$3.00",
+          },
+          {
+            id: "riz-national",
+            title: "Riz national (pois brun) - Brown pea rice",
+            description: "Rice with brown peas",
+            price: "$4.15",
+          },
+        ],
+      },
+      {
+        id: "advance-orders",
+        title: "COMMANDE A L'AVANCE - Advance Orders",
+        image: "/Menu/CaribbeanCodfishBallsCroquettes.png",
+        imageAlt: "Special advance order items",
+        items: [
+          {
+            id: "chiktail-morue",
+            title: "Chiktail à la morue - Cod fritters",
+            description: "Traditional Haitian cod fritters",
+            price: "$12.00",
+          },
+          {
+            id: "cornet-morue",
+            title: "Cornet de morue 30 morceaux - Cod croquettes (30 pieces)",
+            description: "30 pieces of cod croquettes",
+            price: "$40.00",
+          },
+          {
+            id: "cornet-viande-hache",
+            title:
+              "Cornet à la viande hachée 30 morceaux - Ground meat croquettes (30 pieces)",
+            description: "30 pieces of ground meat croquettes",
+            price: "$35.00",
+          },
+        ],
+      },
+      {
+        id: "desserts",
+        title: "DESSERT - Desserts",
+        image: "/Menu/HaitianCheesecakePineappleBlueberryCherry.png",
+        imageAlt: "Delicious Haitian-inspired desserts",
+        items: [
+          {
+            id: "gateau-fromage-ananas",
+            title: "Gâteau au fromage à l'ananas - Pineapple cheesecake",
+            description: "Creamy cheesecake with pineapple topping",
+            price: "$5.00",
+          },
+          {
+            id: "gateau-fromage-bleuet",
+            title: "Gâteau au fromage à bleuet - Blueberry cheesecake",
+            description: "Creamy cheesecake with blueberry topping",
+            price: "$5.00",
+          },
+          {
+            id: "gateau-fromage-cerise",
+            title:
+              "Gâteau au fromage à la cerise noire - Black cherry cheesecake",
+            description: "Creamy cheesecake with black cherry topping",
+            price: "$5.00",
+          },
+        ],
+      },
+      {
+        id: "beverages",
+        title: "BREUVAGE - Beverages",
+        image: "/Menu/CaribbeanFruitJuicesSoursopPomegranate.jpg",
+        imageAlt: "Refreshing tropical beverages",
+        items: [
+          {
+            id: "jus-corosol",
+            title: "Jus de corosol - Soursop juice",
+            description: "Fresh soursop juice",
+            price: "$4.25",
+          },
+          {
+            id: "jus-grenadia",
+            title: "Jus de grenadia - Pomegranate juice",
+            description: "Fresh pomegranate juice",
+            price: "$3.50",
+          },
+          {
+            id: "jus-ananas",
+            title: "Jus d'ananas - Pineapple juice",
+            description: "Fresh pineapple juice",
+            price: "$3.50",
           },
         ],
       },

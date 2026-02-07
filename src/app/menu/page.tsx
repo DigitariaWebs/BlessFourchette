@@ -13,10 +13,7 @@ function MenuContent() {
   const menuType = (searchParams.get("type") as string) || "school";
   const menuConfig = getMenuConfig(menuType);
 
-  const categories = [
-    "School Menu",
-    "Family Menu"
-  ];
+  const categories = ["School Menu", "Family Menu", "Weekend Menu"];
 
   const handleCategoryClick = (category: string) => {
     let newMenuType = "school"; // default
@@ -25,7 +22,9 @@ function MenuContent() {
       newMenuType = "school";
     } else if (category === "Family Menu") {
       newMenuType = "family";
-    } 
+    } else if (category === "Weekend Menu") {
+      newMenuType = "weekend";
+    }
 
     // Update the URL with the new menu type
     const newSearchParams = new URLSearchParams(searchParams.toString());
