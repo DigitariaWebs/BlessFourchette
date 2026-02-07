@@ -1,17 +1,55 @@
 "use client";
 
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import Image from "next/image";
+import { Plus } from "lucide-react";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
-import { getMenuConfig } from "../../data/menuData";
+import { getMenuConfig, MenuItem } from "../../data/menuData";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Cart } from "../../components/ui/Cart";
+import { CartButton } from "../../components/ui/CartButton";
+
+interface CartItem extends MenuItem {
+  quantity: number;
+}
 
 function MenuContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const menuType = (searchParams.get("type") as string) || "school";
   const menuConfig = getMenuConfig(menuType);
+
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const addToCart = (item: MenuItem) => {
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find((i) => i.id === item.id);
+
+      if (existingItem) {
+        return prevItems.map((i) =>
+          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i,
+        );
+      }
+
+      return [...prevItems, { ...item, quantity: 1 }];
+    });
+  };
+
+  const updateQuantity = (itemId: string, quantity: number) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === itemId ? { ...item, quantity } : item,
+      ),
+    );
+  };
+
+  const removeItem = (itemId: string) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+  };
+
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   const categories = ["School Menu", "Family Menu", "Weekend Menu"];
 
@@ -149,18 +187,27 @@ function MenuContent() {
                     {section.title}
                   </h3>
                   {section.items.map((item) => (
-                    <div key={item.id} className="pb-3">
+                    <div key={item.id} className="pb-3 group">
                       <h4 className="text-xl font-medium text-[#1a4d3a] mb-3">
                         {item.title}
                       </h4>
                       <div className="flex items-baseline">
-                        <span className="text-gray-600 text-sm">
+                        <span className="text-gray-600 text-sm flex-1 pr-2">
                           {item.description}
                         </span>
-                        <div className="flex-1 border-b border-dotted border-gray-400 mx-2 mb-1"></div>
-                        <span className="text-[#7cb342] font-bold">
-                          {item.price}
-                        </span>
+                        <div className="flex items-center gap-3">
+                          <div className="flex-1 border-b border-dotted border-gray-400 mx-2 mb-1 min-w-[40px]"></div>
+                          <span className="text-[#7cb342] font-bold whitespace-nowrap">
+                            {item.price}
+                          </span>
+                          <button
+                            onClick={() => addToCart(item)}
+                            className="ml-2 bg-amber-600 hover:bg-amber-700 text-white p-2 rounded-lg transition-all hover:scale-110 shadow-md"
+                            title="Add to cart"
+                          >
+                            <Plus className="w-4 h-4" />
+                          </button>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -170,6 +217,22 @@ function MenuContent() {
           ))}
         </div>
       </section>
+
+      {/* Cart Components */}
+      <Cart
+        items={cartItems}
+        onUpdateQuantity={updateQuantity}
+        onRemoveItem={removeItem}
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+      />
+
+      {totalItems > 0 && (
+        <CartButton
+          itemCount={totalItems}
+          onClick={() => setIsCartOpen(true)}
+        />
+      )}
 
       <Footer />
     </>
