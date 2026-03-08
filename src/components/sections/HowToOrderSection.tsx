@@ -1,26 +1,28 @@
+"use client";
+
 import React from 'react';
+import { useI18n } from "@/i18n/useI18n";
 
 export function HowToOrderSection() {
+  const { t } = useI18n();
+  
   return (
     <section id="how-to-order" className="py-20 px-6 scroll-mt-10">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6">
-            HOW TO ORDER
+            {t("howToOrder.title")}
           </h2>
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-12 h-px bg-gradient-to-r from-transparent to-[var(--color-secondary)]"></div>
             <h3 className="text-xl md:text-2xl text-[var(--color-secondary)] font-medium">
-              Simple • Fast • Secure
+              {t("howToOrder.subtitle")}
             </h3>
             <div className="w-12 h-px bg-gradient-to-l from-transparent to-[var(--color-accent)]"></div>
           </div>
           <p className="text-xl text-[var(--color-foreground)] leading-relaxed max-w-2xl mx-auto">
-            Order fresh, convenient meals in Just a few easy steps:  Choose your menu,
-            select your delivery date, and pay securely.
-            <br />
-            All our meals are vegan and free from peanuts and other common allergens.
+            {t("howToOrder.description")}
           </p>
         </div>
 
@@ -43,12 +45,10 @@ export function HowToOrderSection() {
                 <div className="flex-grow">
                   <div className="bg-white rounded-2xl p-8 shadow-lg border border-[var(--color-muted)] group-hover:border-[var(--color-accent)]/30 group-hover:shadow-xl transition-all duration-300">
                     <h4 className="text-2xl font-bold text-[var(--color-secondary)] mb-4">
-                      Choose Your Menu
+                      {t("howToOrder.step1Title")}
                     </h4>
                     <p className="text-[var(--color-foreground)] text-lg leading-relaxed mb-4">
-                      Browse our School Menu (Monday-Thursday) for school meals
-                      or Family Menu (Monday-Friday) for family platters. Each option
-                      features fresh, nutritious vegan ingredients and offering a BBQ service as well.
+                      {t("howToOrder.step1Description")}
                     </p>
                     <div className="flex items-center gap-3 bg-[var(--color-accent)]/10 rounded-xl p-4">
                       <svg
@@ -65,7 +65,7 @@ export function HowToOrderSection() {
                         />
                       </svg>
                       <span className="text-[var(--color-accent)] font-medium">
-                        Order deadline: 6:00 PM the day before
+                        {t("howToOrder.orderDeadline")}
                       </span>
                     </div>
                   </div>
@@ -86,22 +86,11 @@ export function HowToOrderSection() {
                 <div className="flex-grow">
                   <div className="bg-white rounded-2xl p-8 shadow-lg border border-[var(--color-muted)] group-hover:border-[var(--color-accent)]/30 group-hover:shadow-xl transition-all duration-300">
                     <h4 className="text-2xl font-bold text-[var(--color-secondary)] mb-4">
-                      Customize Your Order
+                      {t("howToOrder.step2Title")}
                     </h4>
                     <p className="text-[var(--color-foreground)] text-lg leading-relaxed mb-4">
-                      Select your preferred delivery date, specify the number of
-                      portions needed. For family orders, a delivery fee will apply.
+                      {t("howToOrder.step2Description")}
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div className="flex items-center gap-2 text-[var(--color-muted-foreground)]">
-                        <div className="w-2 h-2 bg-[var(--color-accent)] rounded-full"></div>
-                        <span>Date selection</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-[var(--color-muted-foreground)]">
-                        <div className="w-2 h-2 bg-[var(--color-accent)] rounded-full"></div>
-                        <span>Portion control</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -120,47 +109,11 @@ export function HowToOrderSection() {
                 <div className="flex-grow">
                   <div className="bg-white rounded-2xl p-8 shadow-lg border border-[var(--color-muted)] group-hover:border-[var(--color-accent)]/30 group-hover:shadow-xl transition-all duration-300">
                     <h4 className="text-2xl font-bold text-[var(--color-secondary)] mb-4">
-                      Secure Payment & Confirmation
+                      {t("howToOrder.step3Title")}
                     </h4>
                     <p className="text-[var(--color-foreground)] text-lg leading-relaxed mb-4">
-                      Complete your payment using your preferred method.
-                      You&apos;ll receive instant confirmation and tracking
-                      information for your order.
+                      {t("howToOrder.step3Description")}
                     </p>
-                    <div className="flex flex-wrap gap-3">
-                      <span className="inline-flex items-center gap-2 bg-[var(--color-accent)]/10 text-[var(--color-accent)] px-3 py-2 rounded-full text-sm font-medium">
-                        <svg
-                          className="w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                        Secure Payment
-                      </span>
-                      <span className="inline-flex items-center gap-2 bg-[var(--color-accent)]/10 text-[var(--color-accent)] px-3 py-2 rounded-full text-sm font-medium">
-                        <svg
-                          className="w-4 h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M13 10V3L4 14h7v7l9-11h-7z"
-                          />
-                        </svg>
-                        Instant Confirmation
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>

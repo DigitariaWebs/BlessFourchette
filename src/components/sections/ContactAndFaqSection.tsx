@@ -1,36 +1,38 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useI18n } from "@/i18n/useI18n";
 
 interface FAQItem {
-  question: string;
-  answer: string;
+  questionKey: string;
+  answerKey: string;
 }
 
 const faqData: FAQItem[] = [
   {
-    question: "What are your order deadlines?",
-    answer: "Orders must be placed by 6:00 PM the day before delivery. For example, to receive meals on Monday, you must order by Sunday at 6:00 PM. This ensures we have enough time to prepare fresh, quality meals for everyone."
+    questionKey: "faq.question1",
+    answerKey: "faq.answer1"
   },
   {
-    question: "Can I modify or cancel my order after placing it?",
-    answer: "Yes, you can modify or cancel your order up to 6:00 PM the day before delivery. After this deadline, we cannot guarantee changes as meal preparation may have already begun. However, if a student will be absent, please notify us by email no later than 7:00 AM on the day of delivery. The order will be canceled and a full refund will be automatically applied to your account and deducted from your next invoice."
+    questionKey: "faq.question2",
+    answerKey: "faq.answer2"
   },
   {
-    question: "What areas do you deliver to?",
-    answer: "We currently deliver to schools and families within our service area. During checkout, you can enter your address to confirm delivery availability. Please note: No delivery fee for school orders, a delivery fee will be applied to family orders only"
+    questionKey: "faq.question3",
+    answerKey: "faq.answer3"
   },
   {
-    question: "How do I track my order?",
-    answer: "After placing your order, you'll receive a receipt email with tracking information. We'll send updates when your order is being prepared and when it's out for delivery. You can also contact us directly for real-time updates on your order status."
+    questionKey: "faq.question4",
+    answerKey: "faq.answer4"
   },
   {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, debit cards, and secure online payment methods. All transactions are processed through our secure payment gateway to ensure your financial information is protected."
+    questionKey: "faq.question5",
+    answerKey: "faq.answer5"
   }
 ];
 
 function FAQAccordion() {
+  const { t } = useI18n();
   const [openItem, setOpenItem] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
@@ -61,7 +63,7 @@ function FAQAccordion() {
             className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-[var(--color-muted)]/30 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/50"
           >
             <h4 className="text-lg font-semibold text-[var(--color-secondary)] pr-4">
-              {item.question}
+              {t(item.questionKey)}
             </h4>
             <div
               className={`flex-shrink-0 w-6 h-6 text-[var(--color-accent)] transition-transform duration-200 ${
@@ -87,7 +89,7 @@ function FAQAccordion() {
             <div className="px-6 pb-5 pt-2">
               <div className="w-full h-px bg-gradient-to-r from-[var(--color-accent)]/20 to-transparent mb-4"></div>
               <p className="text-[var(--color-foreground)] leading-relaxed">
-                {item.answer}
+                {t(item.answerKey)}
               </p>
             </div>
           </div>
@@ -98,18 +100,20 @@ function FAQAccordion() {
 }
 
 export function ContactAndFaqSection() {
+  const { t } = useI18n();
+  
   return (
     <section id="contact-faq" className="py-20 px-6 scroll-mt-10">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6">
-            CONTACT / FAQ
+            {t("faq.title")} / {t("contact.title")}
           </h2>
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-12 h-px bg-gradient-to-r from-transparent to-[var(--color-secondary)]"></div>
             <h3 className="text-xl md:text-2xl text-[var(--color-secondary)] font-medium">
-              We&apos;re here to help with your questions
+              {t("contact.weWouldLove")}
             </h3>
             <div className="w-12 h-px bg-gradient-to-l from-transparent to-[var(--color-accent)]"></div>
           </div>
@@ -121,7 +125,7 @@ export function ContactAndFaqSection() {
           <div className="space-y-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-[var(--color-muted)]">
               <h3 className="text-3xl font-bold text-[var(--color-secondary)] mb-6">
-                Contact Us
+                {t("contact.getInTouch")}
               </h3>
               <div className="w-16 h-1 bg-[var(--color-accent)] mb-8"></div>
 
@@ -149,7 +153,7 @@ export function ContactAndFaqSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[var(--color-secondary)] mb-1 transition-colors duration-200">
-                      Email
+                      {t("contact.email")}
                     </h4>
                     <span className="text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors duration-200 font-medium">
                       info@blessfourchette.com
@@ -179,7 +183,7 @@ export function ContactAndFaqSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[var(--color-secondary)] mb-1 transition-colors duration-200">
-                      Phone
+                      {t("contact.phone")}
                     </h4>
                     <span className="text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors duration-200 font-medium">
                       (819) 962-3677
@@ -212,10 +216,10 @@ export function ContactAndFaqSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[var(--color-secondary)] mb-2 transition-colors duration-200">
-                      Location
+                      {t("contact.location")}
                     </h4>
                     <div className="text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors duration-200">
-                      <p>Serving the Greater Montreal Area</p>
+                      <p>{t("contact.locationDescription")}</p>
                     </div>
                   </div>
                 </div>
@@ -224,7 +228,7 @@ export function ContactAndFaqSection() {
               {/* Social Media */}
               <div className="mt-8 pt-6 border-t border-[var(--color-border)]">
                 <h4 className="font-semibold text-[var(--color-secondary)] mb-4">
-                  Follow Us
+                  {t("contact.followUs")}
                 </h4>
                 <div className="flex gap-4">
                   {/* Facebook */}
@@ -287,11 +291,10 @@ export function ContactAndFaqSection() {
                   </svg>
                   <div>
                     <h5 className="font-semibold text-[var(--color-secondary)] mb-1">
-                      Quick Response Promise
+                      {t("contact.quickResponse")}
                     </h5>
                     <p className="text-sm text-[var(--color-foreground)]">
-                      We typically respond to all inquiries within 2-4 hours
-                      during business hours.
+                      {t("contact.quickResponseDescription")}
                     </p>
                   </div>
                 </div>
@@ -303,12 +306,11 @@ export function ContactAndFaqSection() {
           <div>
             <div className="mb-8">
               <h3 className="text-3xl font-bold text-[var(--color-secondary)] mb-4">
-                Frequently Asked Questions
+                {t("contact.faqTitle")}
               </h3>
               <div className="w-16 h-1 bg-[var(--color-accent)] mb-6"></div>
               <p className="text-[var(--color-foreground)] text-lg leading-relaxed">
-                Find answers to common questions about ordering, delivery, and
-                our services.
+                {t("contact.faqDescription")}
               </p>
             </div>
 
@@ -320,12 +322,10 @@ export function ContactAndFaqSection() {
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-[var(--color-primary)]/10 to-[var(--color-accent)]/10 rounded-2xl p-8 border border-[var(--color-muted)]">
             <h4 className="text-2xl font-bold text-[var(--color-secondary)] mb-4">
-              Still have questions?
+              {t("contact.stillHaveQuestions")}
             </h4>
             <p className="text-[var(--color-foreground)] mb-6 max-w-2xl mx-auto">
-              Our friendly team is here to help! Don&apos;t hesitate to reach
-              out if you need any additional information or have specific
-              dietary requirements.
+              {t("contact.stillHaveQuestionsDescription")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -345,7 +345,7 @@ export function ContactAndFaqSection() {
                     d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                Send us an Email
+                {t("contact.sendEmail")}
               </a>
               <a
                 href="tel:+1234567890"
@@ -364,7 +364,7 @@ export function ContactAndFaqSection() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                Give us a Call
+                {t("contact.giveCall")}
               </a>
             </div>
           </div>

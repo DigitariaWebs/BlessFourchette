@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image"
+import { useI18n } from "@/i18n/useI18n"
 
 export function HeroSection() {
+  const { t } = useI18n();
+
   return (
     <section id="home" className="relative h-screen overflow-hidden">
       {/* Background Image */}
@@ -27,15 +32,15 @@ export function HeroSection() {
 
         {/* Title */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-lg text-[var(--color-primary)]">
-          Bless Fourchette
+          {t("hero.title")}
         </h1>
 
         {/* Subtitle */}
         <section className=" max-w-4xl flex flex-col gap-5 justify-center items-center">
-          <p className="text-xl md:text-2xl lg:text-3xl font-medium drop-shadow-lg">Nourish and serve according to our values and beliefs</p>
+          <p className="text-xl md:text-2xl lg:text-3xl font-medium drop-shadow-lg">{t("hero.subtitle")}</p>
           <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[var(--color-secondary)] to-transparent" />
           <p className="text-md md:text-xl lg:text-2xl font-medium drop-shadow-lg max-w-4xl text-[var(--color-secondary)] px-2">
-            We proudly offer Canado-Haitian cuisine, featuring two distinct culinary styles: flavorful, traditional Haitian dishes and comforting Canadian classics. All meals are 100% vegan, fresh, and thoughtfully prepared to highlight the richness of each cuisine.
+            {t("hero.description")}
           </p>
         </section>
         

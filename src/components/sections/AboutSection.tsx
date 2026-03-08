@@ -2,8 +2,11 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useI18n } from "@/i18n/useI18n"
 
 export function AboutSection() {
+  const { t } = useI18n();
+  
   // Tailwind height classes for each image
   const imageHeightClasses = [
     "h-48 md:h-80", // 200px mobile, 350px desktop
@@ -56,34 +59,34 @@ export function AboutSection() {
     {
       src: "/AboutSection/djondjonriz.webp",
       alt: "Haitian black rice jonjon",
-      title: "Djon Djon Rice"
+      titleKey: "about.djonDjonRice"
     },
     {
       src: "/AboutSection/Plantains.png",
       alt: "Smashed fried plantains",
-      title: "Fried Plantains"
+      titleKey: "about.friedPlantains"
     },
     {
       src: "/Menu/Couscous.png",
       alt: "Delicious Haitian couscous",
-      title: "Couscous"
+      titleKey: "about.couscous"
     },
     {
       src: "/AboutSection/rizcolle.jpg",
       alt: "Haitian red beans and rice",
-      title: "Red Beans & Rice"
+      titleKey: "about.redBeansRice"
     },
     {
       src: "/AboutSection/saladeBettrave.jpg",
       alt: "beet salad",
-      title: "Beet Salad"
+      titleKey: "about.beetSalad"
     }
   ]
 
   return (
     <section id="about-us">
       {/* Food pictures Section */}
-      <motion.div 
+      <motion.div
         className="flex flex-col md:flex-row gap-4 mt-10 justify-center items-center md:items-end w-full overflow-hidden px-4"
         variants={containerVariants}
         initial="hidden"
@@ -110,26 +113,22 @@ export function AboutSection() {
                 sizes="(max-width: 768px) 100vw, 20vw"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              
+
               {/* Overlay */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-              
+              <motion.div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
               {/* Content overlay */}
-              <motion.div
-                className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
+              <motion.div className="absolute bottom-0 left-0 right-0 p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <motion.h3
                   className="text-lg font-bold"
                   initial={{ y: 20, opacity: 0 }}
                   whileHover={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.1, duration: 0.3 }}
                 >
-                  {image.title}
+                  {t(image.titleKey)}
                 </motion.h3>
               </motion.div>
-              
+
               {/* Decorative elements */}
               <motion.div
                 className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full backdrop-blur-sm"
@@ -145,10 +144,10 @@ export function AboutSection() {
       <div className="relative min-h-[40vh] pt-6 flex items-center justify-center">
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-bold text-[var(--color-primary)] mb-6">
-            Our Story
+            {t("about.ourStory")}
           </h2>
           <p className="text-2xl md:text-3xl text-[var(--color-foreground)] font-medium">
-            A Mission Rooted in Faith and Community
+            {t("about.missionSubtitle")}
           </p>
         </div>
       </div>
@@ -159,14 +158,10 @@ export function AboutSection() {
           <div className="space-y-8">
             <div>
               <h3 className="text-3xl md:text-4xl font-bold text-[var(--color-primary)] mb-6">
-                More Than Just a Meal Service
+                {t("about.moreThanMealService")}
               </h3>
               <p className="text-lg text-[var(--color-foreground)] leading-relaxed mb-8">
-                BLESS FOURCHETTE is more than just a meal service—it&apos;s a
-                community founded on faith, generosity, and sharing. We believe
-                that nourishing the body and soul go hand in hand, and that
-                every meal is an opportunity to create connections and serve
-                with love.
+                {t("about.mealServiceDescription")}
               </p>
             </div>
 
@@ -184,13 +179,10 @@ export function AboutSection() {
               </div>
               <blockquote className="relative z-10">
                 <p className="text-1xl md:text-2xl font-serif italic text-[var(--color-secondary)] leading-relaxed mb-4">
-                  &quot;And God said: Behold, I have given you every herb
-                  bearing seed, which is upon the face of all the earth, and
-                  every tree, in which is the fruit of a tree yielding seed; to
-                  you it shall be for meat.&quot;
+                  &quot;{t("about.scriptureQuote")}&quot;
                 </p>
                 <cite className="text-lg font-semibold text-[var(--color-accent)]">
-                  — Genesis 1:29
+                  — {t("about.scriptureReference")}
                 </cite>
               </blockquote>
             </div>
@@ -214,7 +206,7 @@ export function AboutSection() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6">
-              Giving Back: The Heart of Our Business
+              {t("about.givingBack")}
             </h3>
             <div className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8"></div>
           </div>
@@ -233,36 +225,34 @@ export function AboutSection() {
 
             <div className="space-y-6 order-1 md:order-2">
               <p className="text-xl text-[var(--color-foreground)] leading-relaxed">
-                A portion of every dollar you spend actively supports the fight
-                against sickle cell anemia. We are proud to contribute to
-                medical research, patient support, and awareness programs.
+                {t("about.givingBackDescription")}
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm">
                   <h4 className="font-bold text-[var(--color-secondary)] mb-2">
-                    Research
+                    {t("about.research")}
                   </h4>
                   <p className="text-sm text-[var(--color-muted-foreground)]">
-                    Funding innovative studies
+                    {t("about.researchDescription")}
                   </p>
                 </div>
 
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm">
                   <h4 className="font-bold text-[var(--color-secondary)] mb-2">
-                    Support
+                    {t("about.support")}
                   </h4>
                   <p className="text-sm text-[var(--color-muted-foreground)]">
-                    Help for patients and families
+                    {t("about.supportDescription")}
                   </p>
                 </div>
 
                 <div className="text-center p-6 bg-white rounded-xl shadow-sm">
                   <h4 className="font-bold text-[var(--color-secondary)] mb-2">
-                    Awareness
+                    {t("about.awareness")}
                   </h4>
                   <p className="text-sm text-[var(--color-muted-foreground)]">
-                    Education and prevention
+                    {t("about.awarenessDescription")}
                   </p>
                 </div>
               </div>
@@ -277,24 +267,18 @@ export function AboutSection() {
           <div className="space-y-8">
             <div>
               <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)] mb-6">
-                Our Founder&apos;s Vision
+                {t("about.foundersVision")}
               </h3>
               <div className="w-24 h-1 bg-[var(--color-secondary)] mb-8"></div>
             </div>
 
             <p className="text-xl text-[var(--color-foreground)] leading-relaxed">
-              Our passion for holistic health and faith guides every aspect of
-              BLESS FOURCHETTE. Supporting the fight against sickle cell anemia
-              is not just a business mission—it&apos;s a calling from the heart,
-              a deep conviction that we can make a difference in others&apos;
-              lives.
+              {t("about.foundersVisionDescription")}
             </p>
 
             <div className="bg-gradient-to-r from-[var(--color-primary)]/10 to-[var(--color-accent)]/10 p-6 rounded-xl border-l-4 border-[var(--color-primary)]">
               <p className="text-lg italic text-[var(--color-secondary)] font-medium">
-                &quot;Every meal we prepare, every family we serve, every dollar
-                we give back—all of this is part of a greater purpose to nourish
-                our community and heal our world.&quot;
+                &quot;{t("about.foundersQuote")}&quot;
               </p>
             </div>
           </div>
