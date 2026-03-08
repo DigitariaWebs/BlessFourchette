@@ -64,9 +64,9 @@ export function AboutSection() {
       title: "Fried Plantains"
     },
     {
-      src: "/AboutSection/pureePoidsNoir.jpg",
-      alt: "Black bean purée and white rice",
-      title: "Black Bean Purée"
+      src: "/Menu/Couscous.png",
+      alt: "Delicious Haitian couscous",
+      title: "Couscous"
     },
     {
       src: "/AboutSection/rizcolle.jpg",

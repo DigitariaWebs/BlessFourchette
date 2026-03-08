@@ -46,6 +46,12 @@ export default function Header() {
               Menu
             </Link>
             <Link
+              href="/consultation"
+              className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
+            >
+              Book Consultation
+            </Link>
+            <Link
               href="/#contact-faq"
               className="px-3 py-2 hover:text-[var(--color-primary)] transition-colors font-medium"
             >
