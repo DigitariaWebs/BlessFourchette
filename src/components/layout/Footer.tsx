@@ -68,6 +68,12 @@ export function Footer() {
                 Menu
               </Link>
               <Link
+                href="/consultation"
+                className="block text-gray-300 hover:text-[var(--color-accent)] transition-all duration-300 hover:translate-x-1"
+              >
+                Book Consultation
+              </Link>
+              <Link
                 href="/#contact-faq"
                 className="block text-gray-300 hover:text-[var(--color-accent)] transition-all duration-300 hover:translate-x-1"
               >
@@ -115,10 +121,12 @@ export function Footer() {
                 <div>
                   <p className="text-gray-300 text-sm leading-relaxed">
                     <span className="block font-medium">
-                      Mon-Thur: Open for school lunch orders
+                      Saturday: 2:00 PM - 11:00 PM
                     </span>
-                    <span className="block">Mon-Fri: Open for families orders</span>
-                    <span className="block">Sat-Sun: Closed</span>
+                    <span className="block">Sunday: 12:00 PM - 11:00 PM</span>
+                    <span className="block text-gray-400">
+                      Mon-Fri: Open for orders
+                    </span>
                   </p>
                 </div>
               </div>

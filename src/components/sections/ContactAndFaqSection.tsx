@@ -182,19 +182,13 @@ export function ContactAndFaqSection() {
                       Phone
                     </h4>
                     <span className="text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors duration-200 font-medium">
-                     (819) 962-3677
+                      (819) 962-3677
                     </span>
                   </div>
                 </a>
 
-                
                 {/* Location */}
-                <a
-                  href="https://maps.google.com/?q=36+rue+Martineau+Gatineau+QC+J8P7Y7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-4 rounded-xl hover:bg-[var(--color-muted)]/30 transition-colors duration-200 group cursor-pointer"
-                >
+                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-[var(--color-muted)]/30 transition-colors duration-200 group cursor-pointer">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
                     <svg
                       className="w-6 h-6 text-white"
@@ -221,12 +215,10 @@ export function ContactAndFaqSection() {
                       Location
                     </h4>
                     <div className="text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors duration-200">
-                      <p>
-                       36 rue Martineau, Gatineau, QC J8P 7Y7
-                      </p>
+                      <p>Serving the Greater Montreal Area</p>
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
 
               {/* Social Media */}
