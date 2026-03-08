@@ -621,6 +621,215 @@ export const menuConfigs: Record<string, MenuConfig> = {
       },
     ],
   },
+
+  fritaille: {
+    title: "Menu Fritaille",
+    notes: [
+      "Pour les commandes de groupe, vous pouvez les placer à l'avance soit le vendredi et indiquer l'heure désirée pour la livraison",
+      "For group orders, you can place them in advance on Friday and indicate the desired delivery time",
+    ],
+    sections: [
+      {
+        id: "choix-viande-1",
+        title: "CHOIX DE VIANDE - Choice of Meat (1/2)",
+        image: "/Menu/TassotBeefGoatLamb.jpg",
+        imageAlt: "Tassot de bœuf",
+        items: [
+          {
+            id: "tassot-boeuf-epice",
+            title: "Tassot de bœuf sauté épicé",
+            description: "Spicy sautéed beef",
+            price: "$22.75",
+          },
+          {
+            id: "tassot-boeuf-frit",
+            title: "Tassot de bœuf frit",
+            description: "Fried beef",
+            price: "$20.50",
+          },
+          {
+            id: "oxtail-epice",
+            title: "Oxtail sauté épicé",
+            description: "Spicy sautéed oxtail",
+            price: "$25.50",
+          },
+          {
+            id: "tassot-cabri-epice",
+            title: "Tassot de cabri sauté épicé",
+            description: "Spicy sautéed goat",
+            price: "$27.75",
+          },
+        ],
+      },
+      {
+        id: "choix-viande-2",
+        title: "CHOIX DE VIANDE - Choice of Meat (2/2)",
+        image: "/Menu/TooMuchFood1.jpg",
+        imageAlt: "Cabri et poisson",
+        items: [
+          {
+            id: "tassot-cabri-frit",
+            title: "Tassot de cabri frit",
+            description: "Fried goat",
+            price: "$25.00",
+          },
+          {
+            id: "poisson-frit",
+            title: "Poisson frit",
+            description: "Fried fish",
+            price: "$30.00",
+          },
+          {
+            id: "ailes-poulet-creole",
+            title: "Ailes de poulet créole",
+            description: "Creole chicken wings",
+            price: "$18.50",
+          },
+          {
+            id: "boulette-boeuf",
+            title: "Boulette de bœuf",
+            description: "Beef meatballs",
+            price: "$16.75",
+          },
+        ],
+      },
+      {
+        id: "inclus-1",
+        title: "SERVI AVEC - Served With (1/2)",
+        image: "/Menu/HaitianRiceVarietiesDjon.jpg",
+        imageAlt: "Riz national et accompaniments",
+        items: [
+          {
+            id: "riz-national",
+            title: "Riz national",
+            description: "National rice",
+            price: "Inclus",
+          },
+          {
+            id: "acra",
+            title: "Acra",
+            description: "Codfish fritter",
+            price: "Inclus",
+          },
+          {
+            id: "marinade",
+            title: "Marinade",
+            description: "Marinade sauce",
+            price: "Inclus",
+          },
+          {
+            id: "plantain",
+            title: "Plantain salé et sucré",
+            description: "Sweet and salty plantain",
+            price: "Inclus",
+          },
+          {
+            id: "lame-frit",
+            title: "Lame véritable frit",
+            description:
+              "Fried authentic scallops (selon la saison / seasonal)",
+            price: "Inclus",
+          },
+        ],
+      },
+      {
+        id: "inclus-2",
+        title: "SERVI AVEC - Served With (2/2)",
+        image: "/Menu/CaribbeanCodfishBallsCroquettes.png",
+        imageAlt: "Salade et sauces",
+        items: [
+          {
+            id: "salade-verte",
+            title: "Salade verte",
+            description: "Green salad",
+            price: "Inclus",
+          },
+          {
+            id: "pikliz",
+            title: "Pikliz",
+            description: "Spicy pickled vegetables",
+            price: "Inclus",
+          },
+          {
+            id: "petite-sauce",
+            title: "Petite sauce",
+            description: "Small sauce",
+            price: "Inclus",
+          },
+          {
+            id: "chiktail-morue",
+            title: "Chiktail de morue",
+            description: "Codfish cocktail",
+            price: "Inclus",
+          },
+        ],
+      },
+      {
+        id: "extra",
+        title: "EXTRA - Extras",
+        image: "/Menu/CheeseMacorona.jpg",
+        imageAlt: "Extra sides",
+        items: [
+          {
+            id: "extra-riz-national",
+            title: "Riz national extra",
+            description: "Extra national rice",
+            price: "$6.00",
+          },
+          {
+            id: "extra-sauce",
+            title: "Sauce extra",
+            description: "Extra sauce",
+            price: "$1.00",
+          },
+          {
+            id: "pate-oeuf",
+            title: "Paté aux œuf",
+            description: "Egg patty",
+            price: "$2.00",
+          },
+          {
+            id: "pate-morue",
+            title: "Paté à la morue",
+            description: "Codfish patty",
+            price: "$3.00",
+          },
+          {
+            id: "chiktail-morue-extra",
+            title: "Chiktail à la morue",
+            description: "Extra codfish cocktail",
+            price: "$12.00",
+          },
+        ],
+      },
+      {
+        id: "breuvage",
+        title: "BREUVAGE - Beverages",
+        image: "/Menu/CaribbeanFruitJuicesSoursopPomegranate.jpg",
+        imageAlt: "Refreshing drinks",
+        items: [
+          {
+            id: "sprite",
+            title: "Sprite",
+            description: "Sprite soda",
+            price: "$1.50",
+          },
+          {
+            id: "kola-champagne",
+            title: "Kola champagne tropical",
+            description: "Tropical champagne cola",
+            price: "$2.00",
+          },
+          {
+            id: "malta-froide",
+            title: "Malta froide",
+            description: "Cold malt drink",
+            price: "$2.50",
+          },
+        ],
+      },
+    ],
+  },
 };
 
 export const getMenuConfig = (menuType: string = 'school'): MenuConfig => {

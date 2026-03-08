@@ -51,7 +51,12 @@ function MenuContent() {
 
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
-  const categories = ["School Menu", "Family Menu", "Weekend Menu"];
+  const categories = [
+    "School Menu",
+    "Family Menu",
+    "Weekend Menu",
+    "Fritaille",
+  ];
 
   const handleCategoryClick = (category: string) => {
     let newMenuType = "school"; // default
@@ -62,6 +67,8 @@ function MenuContent() {
       newMenuType = "family";
     } else if (category === "Weekend Menu") {
       newMenuType = "weekend";
+    } else if (category === "Fritaille") {
+      newMenuType = "fritaille";
     }
 
     // Update the URL with the new menu type
@@ -118,6 +125,8 @@ function MenuContent() {
                 category === "Weekend Menu" &&
                 menuType === "weekend"
               ) {
+                isActive = true;
+              } else if (category === "Fritaille" && menuType === "fritaille") {
                 isActive = true;
               }
 
