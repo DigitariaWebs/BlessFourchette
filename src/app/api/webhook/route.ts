@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 import { sendEmail } from "@/lib/email";
 import { generateReceiptEmail } from "@/lib/email-templates";
+import type { Stripe } from 'stripe';
 
 export async function POST(req: NextRequest) {
   const body = await req.text();
@@ -34,7 +35,7 @@ export async function POST(req: NextRequest) {
   // Handle the event
   switch (event.type) {
     case "checkout.session.completed": {
-      const session = event.data.object as any;
+      const session = event.data.object as Stripe.Checkout.Session;
 
       // Fetch full session details with line items
       const fullSession = await stripe.checkout.sessions.retrieve(session.id, {
@@ -45,7 +46,7 @@ export async function POST(req: NextRequest) {
       const lineItems =
         fullSession.line_items?.data.map((item) => ({
           title: item.description || "Item",
-          description: (item.price?.product as any)?.description || "",
+          description: (item.price?.product as Stripe.Product)?.description || "",
           price: `$${((item.amount_total || 0) / 100).toFixed(2)}`,
           quantity: item.quantity || 1,
         })) || [];
@@ -89,7 +90,7 @@ export async function POST(req: NextRequest) {
       console.error(
         "Payment failed:",
         paymentIntent.id,
-        (paymentIntent as any).last_payment_error?.message,
+        paymentIntent.last_payment_error?.message,
       );
       break;
     }

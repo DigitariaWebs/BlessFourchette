@@ -48,13 +48,6 @@ export function AboutSection() {
     }
   }
 
-  const overlayVariants = {
-    hidden: { opacity: 0 },
-    hover: {
-      opacity: 1
-    }
-  }
-
   const imageData = [
     {
       src: "/AboutSection/djondjonriz.webp",

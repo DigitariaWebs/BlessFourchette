@@ -26,7 +26,6 @@ function PaymentSuccessContent() {
   const [session, setSession] = useState<SessionData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [receiptSent, setReceiptSent] = useState(false);
 
   useEffect(() => {
     if (!sessionId) {
@@ -64,7 +63,6 @@ function PaymentSuccessContent() {
                 items: data.session.line_items,
               }),
             });
-            setReceiptSent(true);
           } catch (emailError) {
             console.error("Failed to send receipt email:", emailError);
           }
