@@ -81,5 +81,466 @@
     "stillHaveQuestionsDescription": "Our friendly team is here to help! Don't hesitate to reach out if you need any additional information or have specific dietary requirements.",
     "sendEmail": "Send us an Email",
     "giveCall": "Give us a Call"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "home": "Home",
+    "about": "About",
+    "howToOrder": "How to Order",
+    "menu": "Menu",
+    "bookConsultation": "Book Consultation",
+    "faq": "FAQ",
+    "getInTouch": "Get in Touch",
+    "emailUs": "Email us anytime",
+    "callForOrders": "Call for orders",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "monFri": "Mon-Fri: Open for orders",
+    "stayConnected": "Stay Connected",
+    "followUsDescription": "Follow us for updates and delicious content",
+    "allRightsReserved": "All rights reserved.",
+    "servingWithLove": "Serving with love worldwide",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "accessibility": "Accessibility"
+},
+"cart": {
+    "yourOrder": "Your Order",
+    "emptyCart": "Your cart is empty",
+    "email": "Email",
+    "emailRequired": "Required to send your order receipt",
+    "total": "Total",
+    "proceedToPayment": "Proceed to Payment",
+    "processing": "Processing...",
+    "securePayment": "Secure payment powered by Stripe",
+    "quantity": "Quantity",
+    "invalidEmail": "Please enter a valid email address"
+},
+"menu": {
+    "schoolMenu": "School Menu",
+    "familyMenu": "Family Menu",
+    "weekendMenu": "Weekend Fritail Menu",
+    "fritailleMenu": "Menu Fritaille",
+    "addToCart": "Add to Cart",
+    "orderNow": "Order Now",
+    "viewDetails": "View Details",
+    "close": "Close",
+    "servingWith": "Served with",
+    "extra": "Extra",
+    "included": "Included",
+    "comingSoon": "Coming Soon",
+    "selectOption": "Select an option",
+    "importantNotes": "Important Notes",
+    "loadingMenu": "Loading menu...",
+    "titles": {
+      "school": "School Menu",
+      "family": "Family Menu",
+      "weekend": "Weekend Fritail Menu",
+      "fritaille": "Menu Fritaille"
+    },
+    "sections": {
+      "octobre-semaine3": "OCTOBER - WEEK 3",
+      "octobre-semaine4": "OCTOBER - WEEK 4",
+      "octobre-semaine5": "OCTOBER - WEEK 5",
+      "novembre-semaine1": "NOVEMBER - WEEK 1",
+      "novembre-semaine2": "NOVEMBER - WEEK 2",
+      "novembre-semaine3": "NOVEMBER - WEEK 3",
+      "novembre-semaine4": "NOVEMBER - WEEK 4",
+      "decembre-semaine1": "DECEMBER - WEEK 1",
+      "decembre-semaine2": "DECEMBER - WEEK 2",
+      "decembre-semaine3": "DECEMBER - WEEK 3",
+      "decembre-semaine4": "DECEMBER - WEEK 4",
+      "family-coming-soon": "FAMILY FEAST - COMING NOVEMBER 1ST, 2025",
+      "meat-choices": "MEAT CHOICES",
+      "rice-extras": "RICE OPTIONS (EXTRA)",
+      "advance-orders": "ADVANCE ORDERS",
+      "desserts": "DESSERTS",
+      "beverages": "BEVERAGES",
+      "choix-viande-1": "CHOICE OF MEAT (1/2)",
+      "choix-viande-2": "CHOICE OF MEAT (2/2)",
+      "inclus-1": "SERVED WITH (1/2)",
+      "inclus-2": "SERVED WITH (2/2)",
+      "extra": "EXTRAS",
+      "breuvage": "BEVERAGES"
+    },
+    "items": {
+      "oct-s3-mercredi": {
+        "title": "Wednesday - Black rice and stir-fried vegetables with tofu",
+        "description": "Black rice, mixed vegetables stir-fried, marinated tofu - Complete vegetarian menu"
+      },
+      "oct-s3-jeudi": {
+        "title": "Thursday - Tofu burger and crispy potatoes",
+        "description": "Vegetarian tofu burger, crispy potato wedges"
+      },
+      "oct-s4-lundi": {
+        "title": "Monday - White rice, Black-eyed pea puree, Spinach vegetables",
+        "description": "White rice, creole black-eyed pea puree, sautéed spinach"
+      },
+      "oct-s4-mardi": {
+        "title": "Tuesday - Mashed potatoes and stir-fried vegetables with chickpeas",
+        "description": "Mashed potatoes, stir-fried mixed vegetables, spiced chickpeas"
+      },
+      "oct-s4-mercredi": {
+        "title": "Wednesday - Caesar salad with chicken substitute and bread",
+        "description": "Vegetarian Caesar salad, chicken substitute, fresh bread"
+      },
+      "oct-s4-jeudi": {
+        "title": "Thursday - Hot eggplant sandwich",
+        "description": "Hot sandwich with grilled eggplants and creole spices"
+      },
+      "oct-s5-lundi": {
+        "title": "Monday - Rice with brown peas, Beef substitute stir-fry",
+        "description": "Rice with brown peas, stir-fry with beef substitute protein"
+      },
+      "oct-s5-mardi": {
+        "title": "Tuesday - Macaroni with vegetables",
+        "description": "Macaroni with mixed vegetables sautéed and creole sauce"
+      },
+      "oct-s5-mercredi": {
+        "title": "Wednesday - Beet salad and bread",
+        "description": "Fresh beet salad, homemade vinaigrette, artisanal bread"
+      },
+      "oct-s5-jeudi": {
+        "title": "Thursday - Vegetable fajitas and sautéed potatoes",
+        "description": "Vegetarian fajitas, grilled vegetables, sautéed potatoes"
+      },
+      "nov-s1-lundi": {
+        "title": "Monday - Rice with vegetables and tofu stir-fry",
+        "description": "Fragrant rice, seasonal vegetables, tofu stir-fried with creole spices"
+      },
+      "nov-s1-mardi": {
+        "title": "Tuesday - Mashed potatoes and beef vegetable protein stew",
+        "description": "Creamy mashed potatoes, beef vegetable protein stew"
+      },
+      "nov-s1-mercredi": {
+        "title": "Wednesday - Carrot and chili salad with nan bread",
+        "description": "Spicy carrot salad with chili, traditional nan bread"
+      },
+      "nov-s1-jeudi": {
+        "title": "Thursday - Vegetable beef burger",
+        "description": "Vegetarian burger with vegetable beef patty and toppings"
+      },
+      "nov-s2-lundi": {
+        "title": "Monday - White rice, Brown pea puree, Green cabbage and carrot vegetables",
+        "description": "White rice, brown pea puree, sautéed green cabbage and carrots"
+      },
+      "nov-s2-mardi": {
+        "title": "Tuesday - Spaghetti with various vegetable sauce",
+        "description": "Spaghetti with rich sauce made from various seasonal vegetables"
+      },
+      "nov-s2-mercredi": {
+        "title": "Wednesday - Cabbage salad and bread",
+        "description": "Fresh cabbage salad, creole vinaigrette, fresh bread"
+      },
+      "nov-s2-jeudi": {
+        "title": "Thursday - Cold vegetable sandwich",
+        "description": "Cold sandwich with fresh vegetables and homemade condiments"
+      },
+      "nov-s3-lundi": {
+        "title": "Monday - Rice with green peas and broccoli/cauliflower",
+        "description": "Rice with green peas, steamed broccoli and cauliflower"
+      },
+      "nov-s3-mardi": {
+        "title": "Tuesday - Vegetarian lasagna",
+        "description": "Vegetable and cheese lasagna, homemade tomato sauce"
+      },
+      "nov-s3-mercredi": {
+        "title": "Wednesday - Baby spinach and quinoa salad",
+        "description": "Baby spinach salad, quinoa, light vinaigrette"
+      },
+      "nov-s3-jeudi": {
+        "title": "Thursday - Beef vegetable protein stew",
+        "description": "Hearty stew with beef vegetable protein and vegetables"
+      },
+      "nov-s4-lundi": {
+        "title": "Monday - Vegetarian beef shepherd's pie",
+        "description": "Traditional shepherd's pie with vegetarian beef and corn"
+      },
+      "nov-s4-mardi": {
+        "title": "Tuesday - Baked potato, broccoli, tofu patty",
+        "description": "Baked potatoes, steamed broccoli, grilled tofu patty"
+      },
+      "nov-s4-mercredi": {
+        "title": "Wednesday - Couscous salad and bread",
+        "description": "Couscous salad with fresh vegetables, artisanal bread"
+      },
+      "nov-s4-jeudi": {
+        "title": "Thursday - Pumpkin and ginger soup with bread",
+        "description": "Creamy pumpkin soup with ginger, fresh bread"
+      },
+      "dec-s1-lundi": {
+        "title": "Monday - White rice, Green pea puree, Spinach vegetables",
+        "description": "White rice, green pea puree, spinach sautéed with spices"
+      },
+      "dec-s1-mardi": {
+        "title": "Tuesday - Mashed potatoes and stir-fried vegetables with chickpeas",
+        "description": "Mashed potatoes, stir-fried vegetables, spiced chickpeas"
+      },
+      "dec-s1-mercredi": {
+        "title": "Wednesday - Beet Caesar salad and bread",
+        "description": "Caesar salad with beets, creole vinaigrette, fresh bread"
+      },
+      "dec-s1-jeudi": {
+        "title": "Thursday - Tofu burger and crispy potatoes",
+        "description": "Vegetarian tofu burger, crispy potato wedges"
+      },
+      "dec-s2-lundi": {
+        "title": "Monday - Couscous with vegetarian beef",
+        "description": "Traditional couscous with beef vegetable protein"
+      },
+      "dec-s2-mardi": {
+        "title": "Tuesday - Sweet potato and vegetable stew",
+        "description": "Hearty stew with sweet potatoes and seasonal vegetables"
+      },
+      "dec-s2-mercredi": {
+        "title": "Wednesday - Vegetable quiche",
+        "description": "Vegetarian quiche with fresh vegetables and cheese"
+      },
+      "dec-s2-jeudi": {
+        "title": "Thursday - Vegetarian beef pita",
+        "description": "Pita bread filled with vegetarian beef and fresh vegetables"
+      },
+      "dec-s3-lundi": {
+        "title": "Monday - Black rice and tofu stir-fry",
+        "description": "Fragrant black rice, tofu stir-fried with vegetables and creole spices"
+      },
+      "dec-s3-mardi": {
+        "title": "Tuesday - Vegetarian shepherd's pie",
+        "description": "Traditional vegetarian shepherd's pie with plant-based proteins"
+      },
+      "dec-s3-mercredi": {
+        "title": "Wednesday - Green salad and tofu patty",
+        "description": "Fresh green salad accompanied by grilled tofu patty"
+      },
+      "dec-s3-jeudi": {
+        "title": "Thursday - Carrot soup and bread",
+        "description": "Creamy carrot soup with spices, fresh bread"
+      },
+      "dec-s4-lundi": {
+        "title": "Monday - Quinoa and tofu patty",
+        "description": "Quinoa with vegetables accompanied by grilled tofu patty"
+      },
+      "dec-s4-mardi": {
+        "title": "Tuesday - Macaroni with tofu",
+        "description": "Macaroni with stir-fried tofu and creole vegetable sauce"
+      },
+      "dec-s4-mercredi": {
+        "title": "Wednesday - White rice and vegetable stir-fry",
+        "description": "Fragrant white rice, mixed vegetables stir-fried with spices"
+      },
+      "dec-s4-jeudi": {
+        "title": "Thursday - Vegetarian lasagna",
+        "description": "Vegetable and cheese lasagna, homemade tomato sauce"
+      },
+      "family-announcement": {
+        "title": "Family Menu Launch - November 1st, 2025",
+        "description": "We're excited to announce our new Family Menu! Perfect for family gatherings, weekend meals, and special occasions. Our chefs are preparing generous portions of hearty, wholesome meals that will bring your family together around the table. Stay tuned for more details!"
+      },
+      "family-features": {
+        "title": "What to Expect",
+        "description": "• Family-sized portions (4-6 servings)\n• Weekly rotating menu with seasonal ingredients\n• Mix of traditional and modern fusion dishes\n• Vegetarian and vegan options available\n• Special holiday menus"
+      },
+      "family-preorder": {
+        "title": "Pre-Order Information",
+        "description": "Pre-orders will open on September 25th, 2025. Be among the first families to experience our new menu! Follow us on social media or subscribe to our newsletter for updates and exclusive early access offers."
+      },
+      "boeuf-saute-epice": {
+        "title": "Tassot de bœuf sauté épicé - Spicy sautéed beef tassot",
+        "description": "Spicy sautéed beef tassot, served with traditional Haitian sides"
+      },
+      "boeuf-frit": {
+        "title": "Tassot de bœuf frit - Fried beef tassot",
+        "description": "Fried beef tassot, served with traditional Haitian sides"
+      },
+      "agneau-ail-thym": {
+        "title": "Carré d'agneau à l'ail et thym - Garlic and thyme lamb rack",
+        "description": "Lamb rack with garlic and thyme, served with traditional Haitian sides"
+      },
+      "tilapia": {
+        "title": "Poisson tilapia sans arête sans peau - Boneless skinless tilapia",
+        "description": "Boneless skinless tilapia, served with traditional Haitian sides"
+      },
+      "cabri-saute-epice": {
+        "title": "Tassot de cabri sauté épicé - Spicy sautéed goat tassot",
+        "description": "Spicy sautéed goat tassot, served with traditional Haitian sides"
+      },
+      "cabri-frit": {
+        "title": "Tassot de cabri frit - Fried goat tassot",
+        "description": "Fried goat tassot, served with traditional Haitian sides"
+      },
+      "riz-noir": {
+        "title": "Riz noir (jonjon) - Black rice",
+        "description": "Traditional Haitian black rice"
+      },
+      "riz-blanc": {
+        "title": "Riz blanc - White rice",
+        "description": "Steamed white rice"
+      },
+      "riz-national": {
+        "title": "Riz national (pois brun) - Brown pea rice",
+        "description": "Rice with brown peas"
+      },
+      "chiktail-morue": {
+        "title": "Chiktail à la morue - Cod fritters",
+        "description": "Traditional Haitian cod fritters"
+      },
+      "cornet-morue": {
+        "title": "Cornet de morue 30 morceaux - Cod croquettes (30 pieces)",
+        "description": "30 pieces of cod croquettes"
+      },
+      "cornet-viande-hache": {
+        "title": "Cornet à la viande hachée 30 morceaux - Ground meat croquettes (30 pieces)",
+        "description": "30 pieces of ground meat croquettes"
+      },
+      "gateau-fromage-ananas": {
+        "title": "Gâteau au fromage à l'ananas - Pineapple cheesecake",
+        "description": "Creamy cheesecake with pineapple topping"
+      },
+      "gateau-fromage-bleuet": {
+        "title": "Gâteau au fromage à bleuet - Blueberry cheesecake",
+        "description": "Creamy cheesecake with blueberry topping"
+      },
+      "gateau-fromage-cerise": {
+        "title": "Gâteau au fromage à la cerise noire - Black cherry cheesecake",
+        "description": "Creamy cheesecake with black cherry topping"
+      },
+      "jus-corosol": {
+        "title": "Jus de corosol - Soursop juice",
+        "description": "Fresh soursop juice"
+      },
+      "jus-grenadia": {
+        "title": "Jus de grenadia - Pomegranate juice",
+        "description": "Fresh pomegranate juice"
+      },
+      "jus-aninas": {
+        "title": "Jus d'ananas - Pineapple juice",
+        "description": "Fresh pineapple juice"
+      },
+      "tassot-boeuf-epice": {
+        "title": "Tassot de bœuf sauté épicé",
+        "description": "Spicy sautéed beef"
+      },
+      "tassot-boeuf-frit": {
+        "title": "Tassot de bœuf frit",
+        "description": "Fried beef"
+      },
+      "oxtail-epice": {
+        "title": "Oxtail sauté épicé",
+        "description": "Spicy sautéed oxtail"
+      },
+      "tassot-cabri-epice": {
+        "title": "Tassot de cabri sauté épicé",
+        "description": "Spicy sautéed goat"
+      },
+      "tassot-cabri-frit": {
+        "title": "Tassot de cabri frit",
+        "description": "Fried goat"
+      },
+      "poisson-frit": {
+        "title": "Poisson frit",
+        "description": "Fried fish"
+      },
+      "ailes-poulet-creole": {
+        "title": "Ailes de poulet créole",
+        "description": "Creole chicken wings"
+      },
+      "boulette-boeuf": {
+        "title": "Boulette de bœuf",
+        "description": "Beef meatballs"
+      },
+      "acra": {
+        "title": "Acra",
+        "description": "Codfish fritter"
+      },
+      "marinade": {
+        "title": "Marinade",
+        "description": "Marinade sauce"
+      },
+      "plantain": {
+        "title": "Plantain salé et sucré",
+        "description": "Sweet and salty plantain"
+      },
+      "lame-frit": {
+        "title": "Lame véritable frit",
+        "description": "Fried authentic scallops (seasonal)"
+      },
+      "salade-verte": {
+        "title": "Salade verte",
+        "description": "Green salad"
+      },
+      "pikliz": {
+        "title": "Pikliz",
+        "description": "Spicy pickled vegetables"
+      },
+      "petite-sauce": {
+        "title": "Petite sauce",
+        "description": "Small sauce"
+      },
+      "chiktail-morue-2": {
+        "title": "Chiktail de morue",
+        "description": "Codfish cocktail"
+      },
+      "extra-riz-national": {
+        "title": "Riz national extra",
+        "description": "Extra national rice"
+      },
+      "extra-sauce": {
+        "title": "Sauce extra",
+        "description": "Extra sauce"
+      },
+      "pate-oeuf": {
+        "title": "Paté aux œuf",
+        "description": "Egg patty"
+      },
+      "pate-morue": {
+        "title": "Paté à la morue",
+        "description": "Codfish patty"
+      },
+      "chiktail-morue-extra": {
+        "title": "Chiktail à la morue",
+        "description": "Extra codfish cocktail"
+      },
+      "sprite": {
+        "title": "Sprite",
+        "description": "Sprite soda"
+      },
+      "kola-champagne": {
+        "title": "Kola champagne tropical",
+        "description": "Tropical champagne cola"
+      },
+      "malta-froide": {
+        "title": "Malte froide",
+        "description": "Cold malt drink"
+      }
+    },
+    "notes": {
+      "school": {
+        "1": "Menus are available Monday through Thursday",
+        "2": "Orders can be placed for the full month, or every Sunday until noon",
+        "3": "Menus will be changed every month",
+        "4": "School menu available starting November 1st",
+        "5": "We're offering a free vegan BBQ (Beyond Meat, vegan cheese, and more) to every school in June, fully covered by us.",
+        "6": "Fruit juice is included with every meal !"
+      },
+      "family": {
+        "1": "Coming Soon on November 1st, 2025!",
+        "2": "Our delicious family meals will be available for pre-order",
+        "3": "Perfect portions for families of 4-6 people",
+        "4": "Stay tuned for amazing family-friendly dishes!",
+        "5": "Delivery available only Friday 11:00 AM to 4:00 PM",
+        "6": "Fruit juice is included with every meal !"
+      },
+      "weekend": {
+        "1": "Available Friday through Sunday",
+        "2": "Orders can be placed in advance",
+        "3": "For group orders, please place in advance and specify desired delivery time",
+        "4": "All meat choices are served with: acra, marinade, salted and sweet plantains, fried true conch (seasonal), pikliz, sauce, and choice of cod or herring fritters (chef's choice)",
+        "5": "Choice of green salad or macaroni salad included",
+        "6": "Rice options available as extras"
+      },
+      "fritaille": {
+        "1": "For group orders, you can place them in advance on Friday and indicate the desired delivery time"
+      }
+    }
   }
 }

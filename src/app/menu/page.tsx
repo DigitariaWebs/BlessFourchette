@@ -5,10 +5,12 @@ import Image from "next/image";
 import { Plus } from "lucide-react";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
-import { getMenuConfig, MenuItem } from "../../data/menuData";
+import { getMenuConfig as getMenuConfigEN, MenuItem } from "../../data/menuData";
+import { getMenuConfig as getMenuConfigFR } from "../../data/menuData.fr";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Cart } from "../../components/ui/Cart";
 import { CartButton } from "../../components/ui/CartButton";
+import { useI18n } from "@/i18n/useI18n";
 
 interface CartItem extends MenuItem {
   quantity: number;
@@ -17,7 +19,11 @@ interface CartItem extends MenuItem {
 function MenuContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { t, language: lang } = useI18n();
   const menuType = (searchParams.get("type") as string) || "school";
+  
+  // Select the correct menu config based on current language
+  const getMenuConfig = lang === "fr" ? getMenuConfigFR : getMenuConfigEN;
   const menuConfig = getMenuConfig(menuType);
 
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -52,22 +58,22 @@ function MenuContent() {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   const categories = [
-    "School Menu",
-    "Family Menu",
-    "Weekend Menu",
-    "Fritaille",
+    { key: "school", label: t("menu.schoolMenu") },
+    { key: "family", label: t("menu.familyMenu") },
+    { key: "weekend", label: t("menu.weekendMenu") },
+    { key: "fritaille", label: t("menu.fritailleMenu") },
   ];
 
-  const handleCategoryClick = (category: string) => {
+  const handleCategoryClick = (categoryKey: string) => {
     let newMenuType = "school"; // default
 
-    if (category === "School Menu") {
+    if (categoryKey === "school") {
       newMenuType = "school";
-    } else if (category === "Family Menu") {
+    } else if (categoryKey === "family") {
       newMenuType = "family";
-    } else if (category === "Weekend Menu") {
+    } else if (categoryKey === "weekend") {
       newMenuType = "weekend";
-    } else if (category === "Fritaille") {
+    } else if (categoryKey === "fritaille") {
       newMenuType = "fritaille";
     }
 
@@ -116,31 +122,19 @@ function MenuContent() {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => {
               // Determine if this category is active based on menu type
-              let isActive = false;
-              if (category === "School Menu" && menuType === "school") {
-                isActive = true;
-              } else if (category === "Family Menu" && menuType === "family") {
-                isActive = true;
-              } else if (
-                category === "Weekend Menu" &&
-                menuType === "weekend"
-              ) {
-                isActive = true;
-              } else if (category === "Fritaille" && menuType === "fritaille") {
-                isActive = true;
-              }
+              const isActive = menuType === category.key;
 
               return (
                 <button
-                  key={category}
-                  onClick={() => handleCategoryClick(category)}
+                  key={category.key}
+                  onClick={() => handleCategoryClick(category.key)}
                   className={
                     isActive
                       ? "bg-[#7cb342] text-white px-6 py-3 rounded-lg font-medium text-sm tracking-wide transition-colors duration-200"
                       : "bg-transparent text-[#1a4d3a] px-6 py-3 rounded-lg font-medium text-sm tracking-wide border border-[#1a4d3a] hover:bg-[#7cb342] hover:text-white transition-all duration-200 cursor-pointer"
                   }
                 >
-                  {category}
+                  {category.label}
                 </button>
               );
             })}
@@ -154,7 +148,7 @@ function MenuContent() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-lg font-semibold text-[#1a4d3a] mb-4">
-                Important Notes:
+                {t("menu.importantNotes")}:
               </h3>
               <ul className="space-y-2">
                 {menuConfig.notes.map((note, index) => (

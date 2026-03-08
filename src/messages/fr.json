@@ -81,5 +81,470 @@
     "stillHaveQuestionsDescription": "Notre équipe amicale est là pour vous aider! N'hésitez pas à nous contacter si vous avez besoin d'informations supplémentaires ou des exigences alimentaires spécifiques.",
     "sendEmail": "Envoyez-nous un courriel",
     "giveCall": "Appelez-nous"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "home": "Accueil",
+    "about": "À propos",
+    "howToOrder": "Comment commander",
+    "menu": "Menu",
+    "bookConsultation": "Réserver une consultation",
+    "faq": "FAQ",
+    "getInTouch": "Contactez-nous",
+    "emailUs": "Envoyez-nous un courriel à tout moment",
+    "callForOrders": "Appelez pour commander",
+    "saturday": "Samedi",
+    "sunday": "Dimanche",
+    "monFri": "Lun-Ven: Ouvert pour les commandes",
+    "stayConnected": "Restez connecté",
+    "followUsDescription": "Suivez-nous pour les mises à jour et du contenu délicieux",
+    "allRightsReserved": "Tous droits réservés.",
+    "servingWithLove": "Servir avec amour partout dans le monde",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "accessibility": "Accessibilité"
+},
+"cart": {
+    "yourOrder": "Votre commande",
+    "emptyCart": "Votre panier est vide",
+    "email": "Courriel",
+    "emailRequired": "Requis pour envoyer votre reçu de commande",
+    "total": "Total",
+    "proceedToPayment": "Procéder au paiement",
+    "processing": "Traitement...",
+    "securePayment": "Paiement sécurisé par Stripe",
+    "quantity": "Quantité",
+    "invalidEmail": "Veuillez entrer une adresse courriel valide"
+},
+"menu": {
+    "schoolMenu": "Menu Scolaire",
+    "familyMenu": "Menu Familial",
+    "weekendMenu": "Menu Fritaille de Fin de Semaine",
+    "fritailleMenu": "Menu Fritaille",
+    "addToCart": "Ajouter au panier",
+    "orderNow": "Commander maintenant",
+    "viewDetails": "Voir les détails",
+    "close": "Fermer",
+    "servingWith": "Servi avec",
+    "extra": "Extra",
+    "included": "Inclus",
+    "comingSoon": "Bientôt disponible",
+    "selectOption": "Sélectionner une option",
+    "importantNotes": "Notes importantes",
+    "loadingMenu": "Chargement du menu...",
+    "schoolMenuTitle": "Menu Scolaire",
+    "familyMenuTitle": "Menu Familial",
+    "weekendMenuTitle": "Menu Fritaille de Fin de Semaine",
+    "fritailleMenuTitle": "Menu Fritaille",
+    "titles": {
+        "school": "Menu Scolaire",
+        "family": "Menu Familial",
+        "weekend": "Menu Fritaille de Fin de Semaine",
+        "fritaille": "Menu Fritaille"
+    },
+    "sections": {
+        "octobre-semaine3": "OCTOBRE - SEMAINE 3",
+        "octobre-semaine4": "OCTOBRE - SEMAINE 4",
+        "octobre-semaine5": "OCTOBRE - SEMAINE 5",
+        "novembre-semaine1": "NOVEMBRE - SEMAINE 1",
+        "novembre-semaine2": "NOVEMBRE - SEMAINE 2",
+        "novembre-semaine3": "NOVEMBRE - SEMAINE 3",
+        "novembre-semaine4": "NOVEMBRE - SEMAINE 4",
+        "decembre-semaine1": "DÉCEMBRE - SEMAINE 1",
+        "decembre-semaine2": "DÉCEMBRE - SEMAINE 2",
+        "decembre-semaine3": "DÉCEMBRE - SEMAINE 3",
+        "decembre-semaine4": "DÉCEMBRE - SEMAINE 4",
+        "family-coming-soon": "FESTIN FAMILIAL - DISPONIBLE LE 1ER NOVEMBRE 2025",
+        "meat-choices": "CHOIX DE VIANDE",
+        "rice-extras": "OPTIONS DE RIZ (EXTRA)",
+        "advance-orders": "COMMANDES À L'AVANCE",
+        "desserts": "DESSERTS",
+        "beverages": "BREUVAGES",
+        "choix-viande-1": "CHOIX DE VIANDE (1/2)",
+        "choix-viande-2": "CHOIX DE VIANDE (2/2)",
+        "inclus-1": "SERVI AVEC (1/2)",
+        "inclus-2": "SERVI AVEC (2/2)",
+        "extra": "EXTRAS",
+        "breuvage": "BREUVAGES"
+    },
+    "items": {
+        "oct-s3-mercredi": {
+            "title": "Mercredi - Riz noir et légumes sautés au tofu",
+            "description": "Riz noir, légumes variés sautés, tofu mariné - Menu végétarien complet"
+        },
+        "oct-s3-jeudi": {
+            "title": "Jeudi - Burger de tofu et pommes de terre croustillantes",
+            "description": "Burger végétarien au tofu, quartiers de pommes de terre croustillants"
+        },
+        "oct-s4-lundi": {
+            "title": "Lundi - Riz blanc, purée de pois Schwar, épinards",
+            "description": "Riz blanc, purée de pois Schwar à la créole, épinards sautés"
+        },
+        "oct-s4-mardi": {
+            "title": "Mardi - Purée de pommes de terre et légumes sautés aux pois chiches",
+            "description": "Purée de pommes de terre, légumes variés sautés, pois chiches épicés"
+        },
+        "oct-s4-mercredi": {
+            "title": "Mercredi - Salade César avec substitut de poulet et pain",
+            "description": "Salade César végétarienne, substitut de poulet, pain frais"
+        },
+        "oct-s4-jeudi": {
+            "title": "Jeudi - Sandwich chaud aux aubergines",
+            "description": "Sandwich chaud aux aubergines grillées et épices créoles"
+        },
+        "oct-s5-lundi": {
+            "title": "Lundi - Riz aux pois bruns, sauté de bœuf végan",
+            "description": "Riz aux pois bruns, sauté avec protéine végane de bœuf"
+        },
+        "oct-s5-mardi": {
+            "title": "Mardi - Macaroni aux légumes",
+            "description": "Macaroni aux légumes variés sautés et sauce créole"
+        },
+        "oct-s5-mercredi": {
+            "title": "Mercredi - Salade de betterave et pain",
+            "description": "Salade de betterave fraîche, vinaigrette maison, pain artisanal"
+        },
+        "oct-s5-jeudi": {
+            "title": "Jeudi - Fajitas végétariennes et pommes de terre sautées",
+            "description": "Fajitas végétariennes, légumes grillés, pommes de terre sautées"
+        },
+        "nov-s1-lundi": {
+            "title": "Lundi - Riz aux légumes et sauté de tofu",
+            "description": "Riz parfumé, légumes de saison, tofu sauté aux épices créoles"
+        },
+        "nov-s1-mardi": {
+            "title": "Mardi - Purée de pommes de terre et ragoût de protéine végétale",
+            "description": "Purée de pommes de terre onctueuse, ragoût de protéine végétale"
+        },
+        "nov-s1-mercredi": {
+            "title": "Mercredi - Salade de carrotte et chili avec pain nan",
+            "description": "Salade de carrotte épicée au chili, pain nan traditionnel"
+        },
+        "nov-s1-jeudi": {
+            "title": "Jeudi - Burger végétarien au bœuf",
+            "description": "Burger végétarien avec galette de bœuf végétal et toppings"
+        },
+        "nov-s2-lundi": {
+            "title": "Lundi - Riz blanc, purée de pois bruns, légumes aux chou vert et carotte",
+            "description": "Riz blanc, purée de pois bruns, chou vert et carottes sautés"
+        },
+        "nov-s2-mardi": {
+            "title": "Mardi - Spaghetti à la sauce aux légumes variés",
+            "description": "Spaghetti avec sauce riche faite de légumes de saison variés"
+        },
+        "nov-s2-mercredi": {
+            "title": "Mercredi - Salade de chou et pain",
+            "description": "Salade de chou fraîche, vinaigrette créole, pain frais"
+        },
+        "nov-s2-jeudi": {
+            "title": "Jeudi - Sandwich froid aux légumes",
+            "description": "Sandwich froid aux légumes frais et condiments maison"
+        },
+        "nov-s3-lundi": {
+            "title": "Lundi - Riz aux petits pois verts et brocoli/chou-fleur",
+            "description": "Riz aux petits pois verts, brocoli et chou-fleur cuits à la vapeur"
+        },
+        "nov-s3-mardi": {
+            "title": "Mardi - Lasagne végétarienne",
+            "description": "Lasagne aux légumes et fromage, sauce tomate maison"
+        },
+        "nov-s3-mercredi": {
+            "title": "Mercredi - Salade de jeunes épinards et quinoa",
+            "description": "Salade de jeunes épinards, quinoa, vinaigrette légère"
+        },
+        "nov-s3-jeudi": {
+            "title": "Jeudi - Ragoût de protéine végétale au bœuf",
+            "description": "Ragoût copieux avec protéine végétale et légumes"
+        },
+        "nov-s4-lundi": {
+            "title": "Lundi - Tarte au bœuf végétarienne",
+            "description": "Tarte traditionnelle au bœuf végétarien et maïs"
+        },
+        "nov-s4-mardi": {
+            "title": "Mardi - Pommes de terre au four, brocoli, galette de tofu",
+            "description": "Pommes de terre au four, brocoli vapeur, galette de tofu grillée"
+        },
+        "nov-s4-mercredi": {
+            "title": "Mercredi - Salade de couscous et pain",
+            "description": "Salade de couscous aux légumes frais, pain artisanal"
+        },
+        "nov-s4-jeudi": {
+            "title": "Jeudi - Soupe à la citrouille et au gingembre avec pain",
+            "description": "Soupe crémeuse à la citrouille et au gingembre, pain frais"
+        },
+        "dec-s1-lundi": {
+            "title": "Lundi - Riz blanc, purée de pois verts, légumes aux épinards",
+            "description": "Riz blanc, purée de pois verts, épinards sautés aux épices"
+        },
+        "dec-s1-mardi": {
+            "title": "Mardi - Purée de pommes de terre et légumes sautés aux pois chiches",
+            "description": "Purée de pommes de terre, légumes sautés, pois chiches épicés"
+        },
+        "dec-s1-mercredi": {
+            "title": "Mercredi - Salade César aux betteraves et pain",
+            "description": "Salade César aux betteraves, vinaigrette créole, pain frais"
+        },
+        "dec-s1-jeudi": {
+            "title": "Jeudi - Burger de tofu et pommes de terre croustillantes",
+            "description": "Burger végétarien au tofu, quartiers de pommes de terre croustillants"
+        },
+        "dec-s2-lundi": {
+            "title": "Lundi - Couscous au bœuf végétarien",
+            "description": "Couscous traditionnel avec protéine végétale de bœuf"
+        },
+        "dec-s2-mardi": {
+            "title": "Mardi - Ragoût de patate douce et légumes",
+            "description": "Ragoût copieux aux patates douces et légumes de saison"
+        },
+        "dec-s2-mercredi": {
+            "title": "Mercredi - Quiche aux légumes",
+            "description": "Quiche végétarienne aux légumes frais et fromage"
+        },
+        "dec-s2-jeudi": {
+            "title": "Jeudi - Pita au bœuf végétarien",
+            "description": "Pain pita garni de bœuf végétarien et légumes frais"
+        },
+        "dec-s3-lundi": {
+            "title": "Lundi - Riz noir et sauté de tofu",
+            "description": "Riz noir parfumé, tofu sauté aux légumes et épices créoles"
+        },
+        "dec-s3-mardi": {
+            "title": "Mardi - Tarte au bœuf végétarienne",
+            "description": "Tarte végétarienne traditionnelle aux protéines végétales"
+        },
+        "dec-s3-mercredi": {
+            "title": "Mercredi - Salade verte et galette de tofu",
+            "description": "Salade verte fraîche accompagnée de galette de tofu grillée"
+        },
+        "dec-s3-jeudi": {
+            "title": "Jeudi - Soupe à la carotte et pain",
+            "description": "Soupe crémeuse à la carotte et aux épices, pain frais"
+        },
+        "dec-s4-lundi": {
+            "title": "Lundi - Quinoa et galette de tofu",
+            "description": "Quinoa aux légumes accompagné de galette de tofu grillée"
+        },
+        "dec-s4-mardi": {
+            "title": "Mardi - Macaroni au tofu",
+            "description": "Macaroni au tofu sauté et sauce de légumes créole"
+        },
+        "dec-s4-mercredi": {
+            "title": "Mercredi - Riz blanc et légumes sautés",
+            "description": "Riz blanc parfumé, légumes variés sautés aux épices"
+        },
+        "dec-s4-jeudi": {
+            "title": "Jeudi - Lasagne végétarienne",
+            "description": "Lasagne aux légumes et fromage, sauce tomate maison"
+        },
+        "family-announcement": {
+            "title": "Lancement du Menu Familial - 1er novembre 2025",
+            "description": "Nous sommes ravis d'annoncer notre nouveau Menu Familial ! Parfait pour les réunions de famille, les repas de fin de semaine et les occasions spéciales. Nos chefs préparent des portions généreuses de repas copieux et sains qui rassembleront votre famille autour de la table. Restez à l'écoute pour plus de détails !"
+        },
+        "family-features": {
+            "title": "Ce qu'il faut attendre",
+            "description": "• Portions familiales (4-6 personnes)\n• Menu rotatif hebdomadaire avec des ingrédients de saison\n• Mélange de plats traditionnels et de fusion modernes\n• Options végétariennes et véganes disponibles\n• Menus spéciaux pour les fêtes"
+        },
+        "family-preorder": {
+            "title": "Information de pré-commande",
+            "description": "Les pré-commandes ouvriront le 25 septembre 2025. Soyez parmi les premières familles à découvrir notre nouveau menu ! Suivez-nous sur les réseaux sociaux ou abonnez-vous à notre newsletter pour les mises à jour et les offres d'accès anticipé exclusives."
+        },
+        "boeuf-saute-epice": {
+            "title": "Tassot de bœuf sauté épicé",
+            "description": "Tassot de bœuf sauté épicé, servi avec accompagnements haïtiens traditionnels"
+        },
+        "boeuf-frit": {
+            "title": "Tassot de bœuf frit",
+            "description": "Tassot de bœuf frit, servi avec accompagnements haïtiens traditionnels"
+        },
+        "agneau-ail-thym": {
+            "title": "Carré d'agneau à l'ail et thym",
+            "description": "Carré d'agneau à l'ail et thym, servi avec accompagnements haïtiens traditionnels"
+        },
+        "tilapia": {
+            "title": "Poisson tilapia sans arête sans peau",
+            "description": "Tilapia sans arête sans peau, servi avec accompagnements haïtiens traditionnels"
+        },
+        "cabri-saute-epice": {
+            "title": "Tassot de cabri sauté épicé",
+            "description": "Tassot de cabri sauté épicé, servi avec accompagnements haïtiens traditionnels"
+        },
+        "cabri-frit": {
+            "title": "Tassot de cabri frit",
+            "description": "Tassot de cabri frit, servi avec accompagnements haïtiens traditionnels"
+        },
+        "riz-noir": {
+            "title": "Riz noir",
+            "description": "Riz noir traditionnel haïtien"
+        },
+        "riz-blanc": {
+            "title": "Riz blanc",
+            "description": "Riz blanc vapeur"
+        },
+        "riz-national": {
+            "title": "Riz aux pois bruns",
+            "description": "Riz aux pois bruns"
+        },
+        "chiktail-morue": {
+            "title": "Beignets de morue",
+            "description": "Beignets de morue traditionnels haïtiens"
+        },
+        "cornet-morue": {
+            "title": "Croquettes de morue (30 pièces)",
+            "description": "30 croquettes de morue"
+        },
+        "cornet-viande-hache": {
+            "title": "Croquettes de viande hachée (30 pièces)",
+            "description": "30 croquettes de viande hachée"
+        },
+        "gateau-fromage-ananas": {
+            "title": "Gâteau au fromage à l'ananas",
+            "description": "Gâteau au fromage crémeux avec garniture à l'ananas"
+        },
+        "gateau-fromage-bleuet": {
+            "title": "Gâteau au fromage aux bleuets",
+            "description": "Gâteau au fromage crémeux avec garniture aux bleuets"
+        },
+        "gateau-fromage-cerise": {
+            "title": "Gâteau au fromage à la cerise noire",
+            "description": "Gâteau au fromage crémeux avec garniture à la cerise noire"
+        },
+        "jus-corosol": {
+            "title": "Jus de corosol",
+            "description": "Jus de corosol frais"
+        },
+        "jus-grenadia": {
+            "title": "Jus de grenade",
+            "description": "Jus de grenade frais"
+        },
+        "jus-ananas": {
+            "title": "Jus d'ananas",
+            "description": "Jus d'ananas frais"
+        },
+        "tassot-boeuf-epice": {
+            "title": "Tassot de bœuf sauté épicé",
+            "description": "Bœuf sauté épicé"
+        },
+        "tassot-boeuf-frit": {
+            "title": "Tassot de bœuf frit",
+            "description": "Bœuf frit"
+        },
+        "oxtail-epice": {
+            "title": "Queue de bœuf sauté épicé",
+            "description": "Queue de bœuf sautée épicée"
+        },
+        "tassot-cabri-epice": {
+            "title": "Tassot de cabri sauté épicé",
+            "description": "Cabri sauté épicé"
+        },
+        "tassot-cabri-frit": {
+            "title": "Tassot de cabri frit",
+            "description": "Cabri frit"
+        },
+        "poisson-frit": {
+            "title": "Poisson frit",
+            "description": "Poisson frit"
+        },
+        "ailes-poulet-creole": {
+            "title": "Ailes de poulet créoles",
+            "description": "Ailes de poulet créoles"
+        },
+        "boulette-boeuf": {
+            "title": "Boulette de bœuf",
+            "description": "Boulettes de bœuf"
+        },
+        "acra": {
+            "title": "Acra",
+            "description": "Beignet de morue"
+        },
+        "marinade": {
+            "title": "Marinade",
+            "description": "Sauce marinade"
+        },
+        "plantain": {
+            "title": "Plantain salé et sucré",
+            "description": "Plantain salé et sucré"
+        },
+        "lame-frit": {
+            "title": "Calmar frit authentique (de saison)",
+            "description": "Calmar frit authentique (de saison)"
+        },
+        "salade-verte": {
+            "title": "Salade verte",
+            "description": "Salade verte"
+        },
+        "pikliz": {
+            "title": "Pikliz",
+            "description": "Légumes marinés épicés"
+        },
+        "petite-sauce": {
+            "title": "Petite sauce",
+            "description": "Petite sauce"
+        },
+        "chiktail-morue-2": {
+            "title": "Cocktail de morue",
+            "description": "Cocktail de morue"
+        },
+        "extra-riz-national": {
+            "title": "Riz national extra",
+            "description": "Riz national extra"
+        },
+        "extra-sauce": {
+            "title": "Sauce extra",
+            "description": "Sauce extra"
+        },
+        "pate-oeuf": {
+            "title": "Paté aux œuf",
+            "description": "Paté aux œufs"
+        },
+        "pate-morue": {
+            "title": "Paté à la morue",
+            "description": "Paté à la morue"
+        },
+        "chiktail-morue-extra": {
+            "title": "Cocktail de morue extra",
+            "description": "Cocktail de morue extra"
+        },
+        "sprite": {
+            "title": "Sprite",
+            "description": "Boisson gazeuse Sprite"
+        },
+        "kola-champagne": {
+            "title": "Kola champagne tropical",
+            "description": "Cola champagne tropical"
+        },
+        "malta-froide": {
+            "title": "Malte froide",
+            "description": "Boisson maltée froide"
+        }
+    },
+    "notes": {
+        "school": {
+            "1": "Menus disponibles du lundi au jeudi",
+            "2": "Les commandes peuvent être passées pour le mois complet, ou chaque dimanche jusqu'à midi",
+            "3": "Les menus changeront chaque mois",
+            "4": "Menu scolaire disponible à partir du 1er novembre",
+            "5": "Nous offrons un BBQ végan gratuit (Beyond Meat, fromage végan, et plus) à toutes les écoles en juin, entièrement payé par nous.",
+            "6": "Un jus de fruit est inclus avec chaque repas !"
+        },
+        "family": {
+            "1": "Bientôt disponible le 1er novembre 2025 !",
+            "2": "Nos délicieux repas familiaux seront disponibles pour pré-commande",
+            "3": "Portions parfaites pour les familles de 4-6 personnes",
+            "4": "Restez à l'écoute pour des plats familiaux incroyables !",
+            "5": "Livraison disponible seulement vendredi 11h00 à 16h00",
+            "6": "Un jus de fruit est inclus avec chaque repas !"
+        },
+        "weekend": {
+            "1": "Disponible du vendredi au dimanche",
+            "2": "Les commandes peuvent être passées à l'avance",
+            "3": "Pour les commandes de groupe, veuillez les placer à l'avance et indiquer l'heure de livraison souhaitée",
+            "4": "Tous les choix de viande sont servis avec : acra, marinade, plantains salés et sucrés, vrai calmar frit (de saison), pikliz, sauce, et choix de beignets de morue ou hareng (choix du chef)",
+            "5": "Choix de salade verte ou salade de macaroni inclus",
+            "6": "Options de riz disponibles en extras"
+        },
+        "fritaille": {
+            "1": "Pour les commandes de groupe, vous pouvez les placer à l'avance le vendredi et indiquer l'heure souhaitée pour la livraison"
+        }
+    }
   }
 }

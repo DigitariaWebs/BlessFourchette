@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import Image from "next/image";
 import {
@@ -9,8 +11,11 @@ import {
   Instagram,
   Twitter,
 } from "lucide-react";
+import { useI18n } from "@/i18n/useI18n";
 
 export function Footer() {
+  const { t } = useI18n();
+  
   return (
     <footer className="bg-[var(--color-secondary)] text-white mt-auto relative overflow-hidden">
       {/* Background Pattern */}
@@ -40,44 +45,44 @@ export function Footer() {
           {/* Navigation */}
           <div className="lg:col-span-1">
             <h4 className="text-xl font-semibold mb-6 text-[var(--color-accent)] border-b border-[var(--color-accent)] pb-2 inline-block">
-              Navigation
+              {t("footer.navigation")}
             </h4>
             <nav className="space-y-4">
               <Link
                 href="/#home"
                 className="block text-gray-300 hover:text-[var(--color-accent)] transition-all duration-300 hover:translate-x-1"
               >
-                Home
+                {t("footer.home")}
               </Link>
               <Link
                 href="/#about-us"
                 className="block text-gray-300 hover:text-[var(--color-accent)] transition-all duration-300 hover:translate-x-1"
               >
-                About
+                {t("footer.about")}
               </Link>
               <Link
                 href="/#how-to-order"
                 className="block text-gray-300 hover:text-[var(--color-accent)] transition-all duration-300 hover:translate-x-1"
               >
-                How to Order
+                {t("footer.howToOrder")}
               </Link>
               <Link
                 href="/menu"
                 className="block text-gray-300 hover:text-[var(--color-accent)] transition-all duration-300 hover:translate-x-1"
               >
-                Menu
+                {t("footer.menu")}
               </Link>
               <Link
                 href="/consultation"
                 className="block text-gray-300 hover:text-[var(--color-accent)] transition-all duration-300 hover:translate-x-1"
               >
-                Book Consultation
+                {t("footer.bookConsultation")}
               </Link>
               <Link
                 href="/#contact-faq"
                 className="block text-gray-300 hover:text-[var(--color-accent)] transition-all duration-300 hover:translate-x-1"
               >
-                FAQ
+                {t("footer.faq")}
               </Link>
             </nav>
           </div>
@@ -85,7 +90,7 @@ export function Footer() {
           {/* Contact & Hours */}
           <div className="lg:col-span-1">
             <h4 className="text-xl font-semibold mb-6 text-[var(--color-accent)] border-b border-[var(--color-accent)] pb-2 inline-block">
-              Get in Touch
+              {t("footer.getInTouch")}
             </h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -98,7 +103,7 @@ export function Footer() {
                     info@blessfourchette.com
                   </a>
                   <span className="text-gray-400 text-sm">
-                    Email us anytime
+                    {t("footer.emailUs")}
                   </span>
                 </div>
               </div>
@@ -112,7 +117,7 @@ export function Footer() {
                   >
                     +1 (819) 962-3677
                   </a>
-                  <span className="text-gray-400 text-sm">Call for orders</span>
+                  <span className="text-gray-400 text-sm">{t("footer.callForOrders")}</span>
                 </div>
               </div>
 
@@ -121,11 +126,11 @@ export function Footer() {
                 <div>
                   <p className="text-gray-300 text-sm leading-relaxed">
                     <span className="block font-medium">
-                      Saturday: 2:00 PM - 11:00 PM
+                      {t("footer.saturday")}: 2:00 PM - 11:00 PM
                     </span>
-                    <span className="block">Sunday: 12:00 PM - 11:00 PM</span>
+                    <span className="block">{t("footer.sunday")}: 12:00 PM - 11:00 PM</span>
                     <span className="block text-gray-400">
-                      Mon-Fri: Open for orders
+                      {t("footer.monFri")}
                     </span>
                   </p>
                 </div>
@@ -136,13 +141,13 @@ export function Footer() {
           {/* Social Media & Newsletter */}
           <div className="lg:col-span-1">
             <h4 className="text-xl font-semibold mb-6 text-[var(--color-accent)] border-b border-[var(--color-accent)] pb-2 inline-block">
-              Stay Connected
+              {t("footer.stayConnected")}
             </h4>
 
             {/* Social Media */}
             <div className="mb-6">
               <p className="text-gray-300 text-sm mb-4">
-                Follow us for updates and delicious content
+                {t("footer.followUsDescription")}
               </p>
               <div className="flex gap-4">
                 <a
@@ -179,12 +184,11 @@ export function Footer() {
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
             <div className="flex flex-col sm:flex-row items-center gap-4 text-gray-400 text-sm">
               <p>
-                © {new Date().getFullYear()} Bless Fourchette. All rights
-                reserved.
+                © {new Date().getFullYear()} Bless Fourchette. {t("footer.allRightsReserved")}
               </p>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Serving with love worldwide</span>
+                <span>{t("footer.servingWithLove")}</span>
               </div>
             </div>
 
@@ -193,19 +197,19 @@ export function Footer() {
                 href="/privacy"
                 className="text-gray-400 hover:text-[var(--color-accent)] transition-colors duration-300"
               >
-                Privacy Policy
+                {t("footer.privacyPolicy")}
               </Link>
               <Link
                 href="/terms"
                 className="text-gray-400 hover:text-[var(--color-accent)] transition-colors duration-300"
               >
-                Terms of Service
+                {t("footer.termsOfService")}
               </Link>
               <Link
                 href="/accessibility"
                 className="text-gray-400 hover:text-[var(--color-accent)] transition-colors duration-300"
               >
-                Accessibility
+                {t("footer.accessibility")}
               </Link>
             </div>
           </div>

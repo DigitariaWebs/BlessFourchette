@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ShoppingCart, X, Plus, Minus, CreditCard, Loader2 } from 'lucide-react';
 import { MenuItem } from '@/data/menuData';
+import { useI18n } from "@/i18n/useI18n";
 
 interface CartItem extends MenuItem {
   quantity: number;
@@ -17,6 +18,7 @@ interface CartProps {
 }
 
 export function Cart({ items, onUpdateQuantity, onRemoveItem, isOpen, onClose }: CartProps) {
+  const { t } = useI18n();
   const [isProcessing, setIsProcessing] = useState(false);
   const [customerEmail, setCustomerEmail] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -90,7 +92,7 @@ export function Cart({ items, onUpdateQuantity, onRemoveItem, isOpen, onClose }:
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
           <div className="flex items-center gap-2">
             <ShoppingCart className="w-6 h-6 text-amber-600" />
-            <h2 className="text-xl font-bold text-gray-900">Your Order</h2>
+            <h2 className="text-xl font-bold text-gray-900">{t("cart.yourOrder")}</h2>
           </div>
           <button
             onClick={onClose}
@@ -105,7 +107,7 @@ export function Cart({ items, onUpdateQuantity, onRemoveItem, isOpen, onClose }:
           {items.length === 0 ? (
             <div className="text-center py-12">
               <ShoppingCart className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <p className="text-gray-500">Your cart is empty</p>
+              <p className="text-gray-500">{t("cart.emptyCart")}</p>
             </div>
           ) : (
             items.map((item) => (
@@ -161,7 +163,7 @@ export function Cart({ items, onUpdateQuantity, onRemoveItem, isOpen, onClose }:
                 htmlFor="email" 
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Email <span className="text-red-500">*</span>
+                {t("cart.email")} <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -178,16 +180,16 @@ export function Cart({ items, onUpdateQuantity, onRemoveItem, isOpen, onClose }:
                 }`}
               />
               {emailError && (
-                <p className="text-red-500 text-xs mt-1">{emailError}</p>
+                <p className="text-red-500 text-xs mt-1">{t("cart.invalidEmail")}</p>
               )}
               <p className="text-xs text-gray-500 mt-1">
-                Required to send your order receipt
+                {t("cart.emailRequired")}
               </p>
             </div>
 
             {/* Total */}
             <div className="flex items-center justify-between text-lg font-bold">
-              <span>Total:</span>
+              <span>{t("cart.total")}:</span>
               <span className="text-amber-600">${calculateTotal().toFixed(2)}</span>
             </div>
 
@@ -200,18 +202,18 @@ export function Cart({ items, onUpdateQuantity, onRemoveItem, isOpen, onClose }:
               {isProcessing ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  Processing...
+                  {t("cart.processing")}
                 </>
               ) : (
                 <>
                   <CreditCard className="w-5 h-5" />
-                  Proceed to Payment
+                  {t("cart.proceedToPayment")}
                 </>
               )}
             </button>
 
             <p className="text-xs text-gray-500 text-center">
-              Secure payment powered by Stripe
+              {t("cart.securePayment")}
             </p>
           </div>
         )}
